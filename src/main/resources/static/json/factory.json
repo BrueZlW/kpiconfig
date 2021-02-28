@@ -1,0 +1,246 @@
+ {
+  "person": [
+    {
+      "name": "员工技能指数",
+      "location": "0",
+      "id" : "factory_person_0",
+      "seriesType": "pie",
+      "color": ["#32cd32","#ff7f50","#8B78F6","#87cefa","#da70d6"]
+    },
+    {
+      "name": "劳动生产效率",
+      "location": "1",
+      "id" : "factory_person_1",
+      "seriesType": "pie",
+      "color": ["#ff7f50","#da70d6","#87cefa","#32cd32","#8B78F6"]
+    },
+    {
+      "name": "人员培训覆盖率",
+      "location": "2",
+      "id" : "factory_person_2",
+      "seriesType": "line",
+      "color": ["#da70d6","#87cefa","#32cd32","#ff7f50","#8B78F6"]
+    },
+    {
+      "name": "学习曲线",
+      "location": "3",
+      "id" : "factory_person_3",
+      "seriesType": "line",
+      "color": ["#32cd32","#da70d6","#87cefa","#ff7f50","#8B78F6"]
+    },
+    {
+      "name": "订单完成率",
+      "location": "4",
+      "id" : "factory_person_4",
+      "seriesType": "radar",
+      "color": ["#87cefa","#da70d6","#32cd32","#ff7f50","#8B78F6"]
+    },
+    {
+      "name": "人才流失率",
+      "location": "5",
+      "id" : "factory_person_5",
+      "seriesType": "barH",
+      "color": ["#da70d6","#87cefa","#32cd32","#ff7f50","#8B78F6"]
+    }
+  ],
+  "equipment": [
+    {
+      "name": "oee",
+      "location": "0",
+      "id" : "factory_equipment_0",
+      "seriesType": "line",
+      "color": ["#87cefa","#8B78F6","#ff7f50","#32cd32","#da70d6"]
+    },
+    {
+      "name": "设备完好率",
+      "location": "1",
+      "id" : "factory_equipment_1",
+      "seriesType": "gauge",
+      "color": ["#32cd32","#da70d6","#ff7f50","#8B78F6","#87cefa"]
+    },
+    {
+      "name": "雷达图",
+      "location": "2",
+      "id" : "factory_equipment_2",
+      "seriesType": "radar",
+      "color": ["#ff7f50","#8B78F6","#87cefa","#32cd32","#da70d6"]
+    },
+    {
+      "name": "良品率",
+      "location": "3",
+      "id" : "factory_equipment_3",
+      "seriesType": "line",
+      "color": ["#8B78F6","#87cefa","#ff7f50","#32cd32","#da70d6"]
+    }
+
+  ],
+  "process": [
+    {
+      "name": "生产成本",
+      "location": "0",
+      "id" : "factory_process_0",
+      "seriesType": "line",
+      "color": ["#87cefa","#32cd32","#ff7f50","#8B78F6","#da70d6"]
+    },
+    {
+      "name": "人均生产率",
+      "location": "1",
+      "id" : "factory_process_1",
+      "seriesType": "bar",
+      "color": ["#32cd32","#da70d6","#ff7f50","#8B78F6","#87cefa"]
+    },
+    {
+      "name": "雷达图",
+      "location": "2",
+      "id" : "factory_process_2",
+      "seriesType": "radar",
+      "color": ["#ff7f50","#8B78F6","#87cefa","#32cd32","#da70d6"]
+    },
+    {
+      "name": "按时交货率",
+      "location": "3",
+      "id" : "factory_process_3",
+      "seriesType": "gauge",
+      "color": ["#8B78F6","#ff7f50","#87cefa","#32cd32","#da70d6"]
+    }
+  ],
+  "quality": [
+    {
+      "name": "成品一检合格率",
+      "location": "0",
+      "id" : "factory_quality_0",
+      "seriesType": "barH",
+      "color": ["#8B78F6","#ff7f50","#87cefa","#32cd32","#da70d6"]
+    },
+    {
+      "name": "质量事故量",
+      "location": "1",
+      "id" : "factory_quality_1",
+      "seriesType": "barH",
+      "color": ["#ff7f50","#8B78F6","#87cefa","#32cd32","#da70d6"]
+    },
+    {
+      "name": "质量KPI",
+      "location": "2",
+      "id" : "factory_quality_2",
+      "seriesType": "radar",
+      "color": ["#32cd32","#da70d6","#ff7f50","#8B78F6","#87cefa"]
+    },
+    {
+      "name": "产品返修率",
+      "location": "3",
+      "id" : "factory_quality_3",
+      "seriesType": "bar",
+      "color": ["#8B78F6","#87cefa","#ff7f50","#32cd32","#da70d6"]
+    },
+    {
+      "name": "质量损失率",
+      "location": "4",
+      "id" : "factory_quality_4",
+      "seriesType": "line",
+      "color": ["#32cd32","#8B78F6","#87cefa","#ff7f50","#da70d6"]
+    }
+  ],
+  "logistics": [
+    {
+      "name": "物流总成本",
+      "location": "0",
+      "id" : "factory_logistics_0",
+      "seriesType": "barH",
+      "color": ["#ff7f50","#8B78F6","#87cefa","#32cd32","#da70d6"]
+    },
+    {
+      "name": "配送效率",
+      "location": "1",
+      "id" : "factory_logistics_1",
+      "seriesType": "gauge",
+      "color": ["#da70d6","#8B78F6","#87cefa","#ff7f50","#32cd32"]
+    },
+    {
+      "name": "按时交货率",
+      "location": "2",
+      "id" : "factory_logistics_2",
+      "seriesType": "gauge",
+      "color": ["#ff7f50","#32cd32","#8B78F6","#87cefa","#da70d6"]
+    },
+    {
+      "name": "采购准时率",
+      "location": "3",
+      "id" : "factory_logistics_3",
+      "seriesType": "barH",
+      "color": ["#ff7f50","#32cd32","#8B78F6","#87cefa","#da70d6"]
+    }
+  ],
+  "change": [
+     {
+       "name": "计划和实际产量",
+       "location": "0",
+       "id" : "factory_change_0",
+       "seriesType": "line",
+       "color": ["#32cd32","#ff7f50","#8B78F6","#87cefa","#da70d6"]
+     },
+     {
+       "name": "oee",
+       "location": "1",
+       "id" : "factory_change_1",
+       "seriesType": "line",
+       "color": ["#da70d6","#87cefa","#32cd32","#ff7f50","#8B78F6"]
+     },
+     {
+       "name": "不良品数",
+       "location": "2",
+       "id" : "factory_change_2",
+       "seriesType": "line",
+       "color": ["#da70d6","#87cefa","#32cd32","#ff7f50","#8B78F6"]
+     },
+     {
+       "name": "库存",
+       "location": "3",
+       "id" : "factory_change_3",
+       "seriesType": "line",
+       "color": ["#da70d6","#87cefa","#32cd32","#ff7f50","#8B78F6"]
+     },
+     {
+       "name": "良品率",
+       "location": "4",
+       "id" : "factory_change_4",
+       "seriesType": "line",
+       "color": ["#da70d6","#87cefa","#32cd32","#ff7f50","#8B78F6"]
+     },
+     {
+       "name": "生产计划完成率",
+       "location": "5",
+       "id" : "factory_change_5",
+       "seriesType": "line",
+       "color": ["#da70d6","#87cefa","#32cd32","#ff7f50","#8B78F6"]
+     },
+     {
+       "name": "按时交货率",
+       "location": "6",
+       "id" : "factory_change_6",
+       "seriesType": "line",
+       "color": ["#da70d6","#87cefa","#32cd32","#ff7f50","#8B78F6"]
+     },
+     {
+       "name": "物流强度",
+       "location": "7",
+       "id" : "factory_change_7",
+       "seriesType": "line",
+       "color": ["#da70d6","#87cefa","#32cd32","#ff7f50","#8B78F6"]
+     },
+    {
+      "name": "有效工时利用率",
+      "location": "8",
+      "id" : "factory_change_8",
+      "seriesType": "line",
+      "color": ["#da70d6","#87cefa","#32cd32","#ff7f50","#8B78F6"]
+    },
+    {
+      "name": "有效工时利用率",
+      "location": "9",
+      "id" : "factory_change_9",
+      "seriesType": "line",
+      "color": ["#da70d6","#87cefa","#32cd32","#ff7f50","#8B78F6"]
+    }
+   ]
+}

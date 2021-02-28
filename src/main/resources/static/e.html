@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="main" style="height:400px;width:600px"></div>
+
+
+
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('main'));
+    myChart.setOption ({
+        title:{
+            text:'异步数据加载'
+        },
+        legend: {
+            data:['销量']
+        },
+        xAxis :
+            {
+                data:[]
+            }
+        ,
+        yAxis : {},
+        series : [
+            {
+                "name":"销量",
+                "type":"bar",
+                data:[]
+            }
+        ]
+    })
+    myChart.showLoading();	//上部分为echarts基本实现，下部分为ajax异步获取数据
+    var names=[];
+    var nums=[];
+    $.ajax({
+        type : "post",
+        async : true,
+        url : "bar.do",  //重点说明！！这个url是后续servlet的映射地址，请相对应。
+        data : {},
+        dataType : "json",
+        success : function(result) {
+            if (result) {
+                for(var i=0;i<result.length;i++){
+                    names.push(result[i].name);
+                }
+                for(var i=0;i<result.length;i++){
+                    nums.push(result[i].num);
+                }
+                myChart.hideLoading();
+                myChart.setOption({
+                    xAxis:{data:names},
+                    series:[{
+                        name:'销量',
+                        data: nums
+                    }]
+                })
+            }
+        },
+        error : function(errorMsg) {
+            //请求失败时执行该函数
+            alert("图表请求数据失败!");
+            myChart.hideLoading();
+        }
+
+    });
+
+</script>
+</body>
+</html>

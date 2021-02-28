@@ -1,0 +1,276 @@
+{
+  "person": [
+    {
+      "name": "6s指标",
+      "location": "0",
+      "id" : "line_person_0",
+      "seriesType": "pie",
+      "color": ["#32cd32","#ff7f50","#8B78F6","#87cefa","#da70d6","#FE2E64"]
+    },
+    {
+      "name": "劳动生产率",
+      "location": "1",
+      "id" : "line_person_1",
+      "seriesType": "bar",
+      "color": ["#ff7f50","#da70d6","#87cefa","#32cd32","#8B78F6"]
+    },
+    {
+      "name": "生产计划完成率",
+      "location": "2",
+      "id" : "line_person_2",
+      "seriesType": "line",
+      "color": ["#da70d6","#87cefa","#32cd32","#ff7f50","#8B78F6"]
+    },
+    {
+      "name": "技能成长",
+      "location": "3",
+      "id" : "line_person_3",
+      "seriesType": "line",
+      "color": ["#32cd32","#da70d6","#87cefa","#ff7f50","#8B78F6"]
+    },
+    {
+      "name": "准时出勤率",
+      "location": "4",
+      "id" : "line_person_4",
+      "seriesType": "gauge",
+      "color": ["#87cefa","#da70d6","#32cd32","#ff7f50","#8B78F6"]
+    },
+    {
+      "name": "人员有效分分配率",
+      "location": "5",
+      "id" : "line_person_5",
+      "seriesType": "line",
+      "color": ["#da70d6","#87cefa","#32cd32","#ff7f50","#8B78F6"]
+    }
+
+  ],
+  "equipment": [
+    {
+      "name": "oee",
+      "location": "0",
+      "id" : "line_equipment_0",
+      "seriesType": "line",
+      "color": ["#87cefa","#8B78F6","#ff7f50","#32cd32","#da70d6"]
+    },
+    {
+      "name": "设备负荷率",
+      "location": "1",
+      "id" : "line_equipment_1",
+      "seriesType": "gauge",
+      "color": ["#32cd32","#da70d6","#ff7f50","#8B78F6","#87cefa"]
+    },
+    {
+      "name": "雷达图",
+      "location": "2",
+      "id" : "line_equipment_2",
+      "seriesType": "radar",
+      "color": ["#ff7f50","#8B78F6","#87cefa","#32cd32","#da70d6"]
+    },
+    {
+      "name": "设备维护率",
+      "location": "3",
+      "id" : "line_equipment_3",
+      "seriesType": "bar",
+      "color": ["#8B78F6","#87cefa","#ff7f50","#32cd32","#da70d6"]
+    },
+    {
+      "name": "良品率",
+      "location": "4",
+      "id" : "line_equipment_4",
+      "seriesType": "line",
+      "color": ["#da70d6","#87cefa","#32cd32","#ff7f50","#8B78F6"]
+    },
+    {
+      "name": "无故障时间率",
+      "location": "5",
+      "id" : "line_equipment_5",
+      "seriesType": "line",
+      "color": ["#da70d6","#87cefa","#32cd32","#ff7f50","#8B78F6"]
+    }
+
+  ],
+  "process": [
+    {
+      "name": "oee",
+      "location": "0",
+      "id" : "line_process_0",
+      "seriesType": "line",
+      "color": ["#87cefa","#32cd32","#ff7f50","#8B78F6","#da70d6"]
+    },
+    {
+      "name": "生产计划完成率",
+      "location": "1",
+      "id" : "line_process_1",
+      "seriesType": "line",
+      "color": ["#32cd32","#da70d6","#ff7f50","#8B78F6","#87cefa"]
+    },
+    {
+      "name": "生产节拍符合度",
+      "location": "2",
+      "id" : "line_process_2",
+      "seriesType": "gauge",
+      "color": ["#ff7f50","#8B78F6","#87cefa","#32cd32","#da70d6"]
+    },
+    {
+      "name": "产量",
+      "location": "3",
+      "id" : "line_process_3",
+      "seriesType": "bar",
+      "color": ["#8B78F6","#ff7f50","#87cefa","#32cd32","#da70d6"]
+    },
+    {
+      "name": "产线平衡率",
+      "location": "4",
+      "id" : "line_process_4",
+      "seriesType": "line",
+      "color": ["#ff7f50","#8B78F6","#87cefa","#32cd32","#da70d6"]
+    },
+    {
+      "name": "线末产出率",
+      "location": "5",
+      "id" : "line_process_5",
+      "seriesType": "gauge",
+      "color": ["#ff7f50","#8B78F6","#87cefa","#32cd32","#da70d6"]
+    }
+  ],
+  "quality": [
+    {
+      "name": "部件错检率",
+      "location": "0",
+      "id" : "line_quality_0",
+      "seriesType": "line",
+      "color": ["#8B78F6","#ff7f50","#87cefa","#32cd32","#da70d6"]
+    },
+    {
+      "name": "部件废品率",
+      "location": "1",
+      "id" : "line_quality_1",
+      "seriesType": "bar",
+      "color": ["#ff7f50","#8B78F6","#87cefa","#32cd32","#da70d6"]
+    },
+    {
+      "name": "部件漏检率",
+      "location": "2",
+      "id" : "line_quality_2",
+      "seriesType": "line",
+      "color": ["#32cd32","#da70d6","#ff7f50","#8B78F6","#87cefa"]
+    },
+    {
+      "name": "部件返工率",
+      "location": "3",
+      "id" : "line_quality_3",
+      "seriesType": "barH",
+      "color": ["#8B78F6","#87cefa","#ff7f50","#32cd32","#da70d6"]
+    },
+    {
+      "name": "部件加工不良率",
+      "location": "4",
+      "id" : "line_quality_4",
+      "seriesType": "barH",
+      "color": ["#32cd32","#8B78F6","#87cefa","#ff7f50","#da70d6"]
+    }
+  ],
+  "logistics": [
+    {
+      "name": "生产线平衡率",
+      "location": "0",
+      "id" : "line_logistics_0",
+      "seriesType": "line",
+      "color": ["#ff7f50","#8B78F6","#87cefa","#32cd32","#da70d6"]
+    },
+    {
+      "name": "产线节拍符合度",
+      "location": "1",
+      "id" : "line_logistics_1",
+      "seriesType": "barH",
+      "color": ["#da70d6","#8B78F6","#87cefa","#ff7f50","#32cd32"]
+    },
+    {
+      "name": "生产线平滑指数",
+      "location": "2",
+      "id" : "line_logistics_2",
+      "seriesType": "radar",
+      "color": ["#ff7f50","#32cd32","#8B78F6","#87cefa","#da70d6"]
+    },
+    {
+      "name": "线末产出率",
+      "location": "3",
+      "id" : "line_logistics_3",
+      "seriesType": "line",
+      "color": ["#ff7f50","#32cd32","#8B78F6","#87cefa","#da70d6"]
+    }
+  ],
+
+  "change": [
+    {
+      "name": "计划和实际产量",
+      "location": "0",
+      "id" : "line_change_0",
+      "seriesType": "line",
+      "color": ["#32cd32","#ff7f50","#8B78F6","#87cefa","#da70d6"]
+    },
+    {
+      "name": "oee",
+      "location": "1",
+      "id" : "line_change_1",
+      "seriesType": "line",
+      "color": ["#da70d6","#87cefa","#32cd32","#ff7f50","#8B78F6"]
+    },
+    {
+      "name": "不良品数",
+      "location": "2",
+      "id" : "line_change_2",
+      "seriesType": "line",
+      "color": ["#da70d6","#87cefa","#32cd32","#ff7f50","#8B78F6"]
+    },
+    {
+      "name": "库存",
+      "location": "3",
+      "id" : "line_change_3",
+      "seriesType": "line",
+      "color": ["#da70d6","#87cefa","#32cd32","#ff7f50","#8B78F6"]
+    },
+    {
+      "name": "良品率",
+      "location": "4",
+      "id" : "line_change_4",
+      "seriesType": "line",
+      "color": ["#da70d6","#87cefa","#32cd32","#ff7f50","#8B78F6"]
+    },
+    {
+      "name": "生产计划完成率",
+      "location": "5",
+      "id" : "line_change_5",
+      "seriesType": "line",
+      "color": ["#da70d6","#87cefa","#32cd32","#ff7f50","#8B78F6"]
+    },
+    {
+      "name": "按时交货率",
+      "location": "6",
+      "id" : "line_change_6",
+      "seriesType": "line",
+      "color": ["#da70d6","#87cefa","#32cd32","#ff7f50","#8B78F6"]
+    },
+    {
+      "name": "物流强度",
+      "location": "7",
+      "id" : "line_change_7",
+      "seriesType": "line",
+      "color": ["#da70d6","#87cefa","#32cd32","#ff7f50","#8B78F6"]
+    },
+    {
+      "name": "有效工时利用率",
+      "location": "8",
+      "id" : "line_change_8",
+      "seriesType": "line",
+      "color": ["#da70d6","#87cefa","#32cd32","#ff7f50","#8B78F6"]
+    },
+    {
+      "name": "有效工时利用率",
+      "location": "9",
+      "id" : "line_change_9",
+      "seriesType": "line",
+      "color": ["#da70d6","#87cefa","#32cd32","#ff7f50","#8B78F6"]
+    }
+  ]
+}

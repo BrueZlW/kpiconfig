@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello world</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#btntest").click(function () {
+                alert("JQuery works.");
+                // $("#test").html("data");
+                $.ajax({
+                    url:"/demo/testAjax",
+                    method:"post",
+                    data:{},
+                    success:function (data) {
+                        $("#test").html(data);
+                    }
+                })
+            })
+            $("#btn").click(function () {
+                // alert($("input").attr("name"));
+                // var nameid = $("input").attr("name");
+                // alert(name);
+                // alert($("form").serialize());
+                $.ajax({
+                    url:"/demo/get",
+                    method:"post",
+                    data:$("form").serialize(),
+                    // data:{},
+                    success:function (data) {
+                        value_equipment={ekid:0,equipment_operating_rate:0,equipment_load_rate:0,equipment_capability:0,
+                            mtbf:0,mttr:0};
+                        value_equipment = data;
+                        $("#massage").html(value_equipment.equipment_load_rate);
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+Hello world! test03 static
+</br>
+<div id="test">test ajax</div>
+<button id="btntest">update</button>
+<hr>
+<form>
+    <input type="text" name="id" value="请输入id">
+</form>
+
+<button id="btn">根据id查询</button>
+<div id="massage">这里显示查询结果</div>
+
+</body>
+</html>

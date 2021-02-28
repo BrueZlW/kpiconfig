@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>智能KPI 工厂V1.0</title>
+    <!-- ---------------添加开始 ------------------->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/commen_quality.css" rel="stylesheet">
+    <link href="css/bootstrap-select.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <!-- <script src="js/flexible.js"></script> -->
+    <script src="js/quality1.js"></script>
+    <script src="js/le/factory_equipment.js"></script>
+    <script src="js/boot_demo0802.js"></script>
+    <script src="js/zonglan.js"></script>
+    <script src="js/logistic_factory.js"></script>
+
+    <script src="js/persongcChart.js"></script>
+    <script src="js/qiyeKPI.js"></script>
+
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/toSupport.js"></script>
+
+    <script src="layer/layer.js"></script>
+    <script src="layer/extend/layer.ext.js"></script>
+
+    <!-- ---------------添加结束 ------------------->
+
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+		============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Google Fonts
+            ============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- normalize CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- meanmenu icon CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <!-- main CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- educate icon CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/educate-custon-icon.css">
+    <!-- mCustomScrollbar CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- metisMenu CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="css/metisMenu/metisMenu-vertical.css">
+    <!-- style CSS
+            ============================================ -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- responsive CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- modernizr JS
+            ============================================ -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <!-- zrh模板 引用的 -->
+    <link href="styles/common.css" rel="stylesheet">
+    <script src="scripts/Plugin/jquery-3.3.1.min.js"></script>
+    <script src="scripts/Plugin/echarts.min.js"></script>
+    <script src="scripts/common.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/Plugin/laydate/laydate.js"></script>
+</head>
+
+<body>
+<!--start 左边菜单栏  -->
+<div class="left-sidebar-pro">
+    <nav id="sidebar" class="">
+        <!--左边的公司logo -->
+        <div class="sidebar-header">
+            <a href="index.html"><img class="main-logo" src="img/logo/combini-small.JPG" alt="" /></a>
+
+        </div>
+
+        <div class="left-custom-menu-adp-wrap comment-scrollbar">
+            <nav class="sidebar-nav left-sidebar-menu-pro">
+                <!-- 整个左边菜单栏，四个层级，工厂、车间、产线、工位 -->
+                <ul class="metismenu" id="menu1">
+                    <!-- 套娃 -->
+                    <li class="active">
+                        <!--这个active是不隐藏底下的子栏目，默认是隐藏的-->
+                        <a class="has-arrow" href="companyKPI.html">
+                            <span class="educate-icon educate-home icon-wrap"></span>
+                            <span class="icon-wrap" id="company-jump">企业KPI</span>
+                            <!-- <span class="mini-click-non fa fa-home fa-4x">&nbsp智能KPI</span> -->
+                        </a>
+                        <ul class="submenu-angle" aria-expanded="true">
+                            <li class="active">
+                                <a title="工厂1" class="has-arrow" href="index-factory.html">
+                                        <span class="mini-sub-pro fa fa-industry fa-3x"
+                                              id="factory-jump1">&nbsp&nbsp工厂1</span>
+                                </a>
+                                <ul>
+                                    <li class="active">
+                                        <a title="车间1" class="has-arrow" href="index-workshop.html">&nbsp&nbsp<span
+                                                class="mini-sub-pro fa fa-indent fa-2x"
+                                                id="workshop-jump1-1">&nbsp&nbsp车间1</span></a>
+                                        <ul>
+                                            <li class="active">
+                                                <a title="产线1" class="has-arrow"
+                                                   href="index-line.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                        class="mini-sub-pro fa fa-line-chart"
+                                                        id="line-jump1-1-1">&nbsp&nbsp产线1</span></a>
+                                                <ul>
+                                                    <li><a href="index-workstation.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male"
+                                                            id="workstation-jump1-1-1-1">&nbsp&nbsp工位1</span></a>
+                                                    </li>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male"
+                                                            id="workstation-jump1-1-1-2">&nbsp&nbsp工位2</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="active">
+                                                <a title="产线2" class="has-arrow"
+                                                   href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                        class="mini-sub-pro fa fa-line-chart"
+                                                        id="line-jump1-1-2">&nbsp&nbsp产线2</span></a>
+                                                <ul>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male"
+                                                            id="workstation-jump1-1-2-1">&nbsp&nbsp工位1</span></a>
+                                                    </li>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male"
+                                                            id="workstation-jump1-1-2-2">&nbsp&nbsp工位2</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="active">
+                                        <a title="车间2" class="has-arrow" href="index.html">&nbsp&nbsp<span
+                                                class="mini-sub-pro fa fa-indent fa-2x"
+                                                id="workshop-jump1-2">&nbsp&nbsp车间2</span></a>
+                                        <ul>
+                                            <li class="active">
+                                                <a title="产线1" class="has-arrow"
+                                                   href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                        class="mini-sub-pro fa fa-line-chart"
+                                                        id="line-jump1-2-1">&nbsp&nbsp产线1</span></a>
+                                                <ul>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male"
+                                                            id="workstation-jump1-2-1-1">&nbsp&nbsp工位1</span></a>
+                                                    </li>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male"
+                                                            id="workstation-jump1-2-1-2">&nbsp&nbsp工位2</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="active">
+                                                <a title="产线2" class="has-arrow"
+                                                   href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                        class="mini-sub-pro fa fa-line-chart"
+                                                        id="line-jump1-2-2">&nbsp&nbsp产线2</span></a>
+                                                <ul>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male"
+                                                            id="workstation-jump1-2-2-1">&nbsp&nbsp工位1</span></a>
+                                                    </li>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male"
+                                                            id="workstation-jump1-2-2-2">&nbsp&nbsp工位2</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+                                <a title="工厂2" class="has-arrow" href="index.html">
+                                    <span class="mini-sub-pro fa fa-industry fa-3x">&nbsp&nbsp工厂2</span>
+                                </a>
+                                <ul>
+                                    <li class="active">
+                                        <a title="车间1" class="has-arrow" href="index.html">&nbsp&nbsp<span
+                                                class="mini-sub-pro fa fa-indent fa-2x">&nbsp&nbsp车间1</span></a>
+                                        <ul>
+                                            <li class="active">
+                                                <a title="产线1" class="has-arrow"
+                                                   href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                        class="mini-sub-pro fa fa-line-chart">&nbsp&nbsp产线1</span></a>
+                                                <ul>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male">&nbsp&nbsp工位1</span></a>
+                                                    </li>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male">&nbsp&nbsp工位2</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="active">
+                                                <a title="产线2" class="has-arrow"
+                                                   href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                        class="mini-sub-pro fa fa-line-chart">&nbsp&nbsp产线2</span></a>
+                                                <ul>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male">&nbsp&nbsp工位1</span></a>
+                                                    </li>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male">&nbsp&nbsp工位2</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="active">
+                                        <a title="车间2" class="has-arrow" href="index.html">&nbsp&nbsp<span
+                                                class="mini-sub-pro fa fa-indent fa-2x">&nbsp&nbsp车间2</span></a>
+                                        <ul>
+                                            <li class="active">
+                                                <a title="产线1" class="has-arrow"
+                                                   href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                        class="mini-sub-pro fa fa-line-chart">&nbsp&nbsp产线1</span></a>
+                                                <ul>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male">&nbsp&nbsp工位1</span></a>
+                                                    </li>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male">&nbsp&nbsp工位2</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="active">
+                                                <a title="产线2" class="has-arrow"
+                                                   href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                        class="mini-sub-pro fa fa-line-chart">&nbsp&nbsp产线2</span></a>
+                                                <ul>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male">&nbsp&nbsp工位1</span></a>
+                                                    </li>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male">&nbsp&nbsp工位2</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                </ul>
+
+
+
+
+            </nav>
+        </div>
+    </nav>
+</div>
+<!-- End 左边菜单栏 -->
+
+<!-- start 右边部分 -->
+<div class="all-content-wrapper">
+    <!-- 第一大行 系统名称 -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="div_any_child_systemname">
+                    <div class="div_any_title_systemname">智能KPI管理系统</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 系统名称结束 -->
+
+    <!-- start 第二行 人员、设备、过程、质量、物流等菜单栏 -->
+    <div class="header-advance-area">
+        <div class="header-top-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="header-top-wraper">
+                            <div class="row">
+                                <!-- 隐藏侧边栏 -->
+                                <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
+                                    <div class="menu-switcher-pro">
+                                        <button type="button" id="sidebarCollapse"
+                                                class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
+                                            <i class="educate-icon  educate-nav"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
+                                    <div class="menu-switcher-pro">
+                                        <button type="button"
+                                                class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
+                                            <i class="fa fa-support">分层审核</i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-9 col-md-12 col-sm-8 col-xs-12">
+                                    <div class="header-top-menu tabl-d-n">
+                                        <ul class="nav nav-pills" role="tablist">
+                                            <li role="presentation" class="active"><a href="#station" aria-controls="profile"
+                                                                                      role="tab" data-toggle="tab">工位级</a></li>
+                                            <li role="presentation"><a href="#line" aria-controls="home" role="tab"
+                                                                       data-toggle="tab">产线级</a></li>
+                                            <li role="presentation"><a href="#workshop" aria-controls="profile"
+                                                                       role="tab" data-toggle="tab">车间级</a></li>
+                                            <li role="presentation"><a href="#factory" aria-controls="profile"
+                                                                       role="tab" data-toggle="tab">工厂级</a></li>
+                                            <li role="presentation"><a href="#company" aria-controls="profile"
+                                                                       role="tab" data-toggle="tab">企业级</a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
+                                    <div class="menu-switcher-pro">
+                                        <button type="button"
+                                                class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
+                                            <i class="fa fa-support" onclick="to(this)">&nbspKPI优化支持</i>
+                                        </button>
+                                        <!-- <span>A3报告导出</span> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end 第二行 人员、设备、过程、质量、物流等菜单栏 -->
+
+    <!-- 展示数据的区域 分三块 -->
+
+    <div class="datashow-area">
+        <div class="tab-content">
+            <!--工位KPI-->
+            <div role="tabpanel" class="tab-pane active" id="station">
+                <div class="container-fluid">
+                    <div class="col-lg-2">
+                        <select class="selectpicker" data-style="btn-info" title="请选择具体工位">
+                            <option>工位A</option>
+                            <option>工位B</option>
+                            <option>工位C</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-offset-8 col-lg-2">
+                        <button id="btn" type="button"  class="btn btn-info" >&nbsp&nbsp审核数据提交&nbsp&nbsp</button>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="row">
+                            <div class="div_any_child div_review_left_top_height">
+                                <div class="div_any_title "><img src="images/title_2.png">审核人员信息</div>
+                                <div class="table_p" style=" margin-top: 20px;">
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th style="margin-top: 15px; text-align: center"></th>
+                                            <th style="text-align: center"></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td width="50%">姓名</td>
+                                            <td width="50%">张三</td>
+                                        </tr>
+                                        <tr>
+                                            <td>所属部门</td>
+                                            <td>制造部门</td>
+                                        </tr>
+                                        <tr>
+                                            <td>员工ID</td>
+                                            <td>9528</td>
+                                        </tr>
+                                        <tr>
+                                            <td>岗位</td>
+                                            <td>XXXXXX</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="div_any_child div_review_left_buttom_height">
+                                <div class="div_any_title"><img src="images/title_2.png">已有数据</div>
+                                <div class="table_p" style=" margin-top: 20px;">
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th style="margin-top: 15px; text-align: center">数据类型</th>
+                                            <th style="text-align: center">具体数值</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td width="50%">设备开动时间</td>
+                                            <td width="50%">12小时</td>
+                                        </tr>
+                                        <tr>
+                                            <td>设备负荷时间</td>
+                                            <td>10小时</td>
+                                        </tr>
+                                        <tr>
+                                            <td>岗位类别</td>
+                                            <td>XXX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>单位时间计划生产数量</td>
+                                            <td>100</td>
+                                        </tr>
+                                        </tr>
+                                        <tr>
+                                            <td>单位时间单件合格品标准完成时间</td>
+                                            <td>10</td>
+                                        </tr>
+                                        </tr>
+                                        <tr>
+                                            <td>应到岗人员数量</td>
+                                            <td>20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>应到岗人员数量</td>
+                                            <td>20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>物料需求量</td>
+                                            <td>20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>工序间计划时间窗时间</td>
+                                            <td>100</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="div_any_child div_review_right_height">
+                            <div class="div_any_title any_title_width"><img src="images/title_0.png">待审核数据
+                            </div>
+                            <div class="table_p" style=" margin-top: 20px;">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th style="margin-top: 15px; text-align: center">数据类型</th>
+                                        <th style="text-align: center">具体数值</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>最大生产能力</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>允许公差上限</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>允许公差下限</td>
+                                        <td><input></td>
+                                    </tr>
+                                    </tr>
+                                    <tr>
+                                        <td>抽检样品误差分布标准差σ</td>
+                                        <td><input></td>
+                                    </tr>
+                                    </tr>
+                                    <tr>
+                                        <td>故障发生时间</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>维修开始时间</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>维修结束时间</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>零件ID</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>零件检测数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="50%">零件生产数量</td>
+                                        <td width="50%"><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>零件合格数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>零件返修数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>零件废品数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>零件漏检数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>零件错检数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>岗位可胜任人数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>工作努力度</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>实际到岗人员数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>物料补给量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>工序间运作时间窗时间</td>
+                                        <td><input></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--产线总览-->
+            <div role="tabpanel" class="tab-pane" id="line">
+                <div class="container-fluid">
+                    <div class="col-lg-2">
+                        <select class="selectpicker" data-style="btn-info" title="请选择具体产线">
+                            <option>产线A</option>
+                            <option>产线B</option>
+                            <option>产线C</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-offset-8 col-lg-2">
+                        <button id="btn" type="button"  class="btn btn-info" >&nbsp&nbsp审核数据提交&nbsp&nbsp</button>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="row">
+                            <div class="div_any_child div_review_left_top_height">
+                                <div class="div_any_title "><img src="images/title_2.png">审核人员信息</div>
+                                <div class="table_p" style=" margin-top: 20px;">
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th style="margin-top: 15px; text-align: center"></th>
+                                            <th style="text-align: center"></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td width="50%">姓名</td>
+                                            <td width="50%">张三</td>
+                                        </tr>
+                                        <tr>
+                                            <td>所属部门</td>
+                                            <td>制造部门</td>
+                                        </tr>
+                                        <tr>
+                                            <td>员工ID</td>
+                                            <td>9528</td>
+                                        </tr>
+                                        <tr>
+                                            <td>岗位</td>
+                                            <td>XXXXXX</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="div_any_child div_review_left_buttom_height">
+                                <div class="div_any_title"><img src="images/title_2.png">已有数据</div>
+                                <div class="table_p" style=" margin-top: 20px;">
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th style="margin-top: 15px; text-align: center">数据类型</th>
+                                            <th style="text-align: center">具体数值</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td width="50%">产线开动时间</td>
+                                            <td width="50%">12小时</td>
+                                        </tr>
+                                        <tr>
+                                            <td>产线负荷时间</td>
+                                            <td>10小时</td>
+                                        </tr>
+                                        <tr>
+                                            <td>设备维护时间</td>
+                                            <td>2小时</td>
+                                        </tr>
+                                        <tr>
+                                            <td>素养</td>
+                                            <td>100</td>
+                                        </tr>
+                                        </tr>
+                                        <tr>
+                                            <td>整顿</td>
+                                            <td>90</td>
+                                        </tr>
+                                        </tr>
+                                        <tr>
+                                            <td>清扫</td>
+                                            <td>20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>清洁</td>
+                                            <td>70</td>
+                                        </tr>
+                                        <tr>
+                                            <td>安全</td>
+                                            <td>20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>整理</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>计划生产数量</td>
+                                            <td>1000件</td>
+                                        </tr>
+                                        <tr>
+                                            <td>应到岗人员数量</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>人员调整标准处理时间</td>
+                                            <td>2小时</td>
+                                        </tr>
+                                        <tr>
+                                            <td>每工位标准工作时间</td>
+                                            <td>10小时</td>
+                                        </tr>
+                                        <tr>
+                                            <td>每日工作时间</td>
+                                            <td>10小时</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="div_any_child div_review_right_height">
+                            <div class="div_any_title any_title_width"><img src="images/title_0.png">待审核数据
+                            </div>
+                            <div class="table_p" style=" margin-top: 20px;">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th style="margin-top: 15px; text-align: center">数据类型</th>
+                                        <th style="text-align: center">具体数值</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td width="50%">理论产量</td>
+                                        <td width="50%"><input></td>
+                                    </tr>
+                                    </tr>
+                                    <tr>
+                                        <td>故障发生时间</td>
+                                        <td><input></td>
+                                    </tr>
+                                    </tr>
+                                    <tr>
+                                        <td>维修开始时间</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>维修结束时间</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>零件ID</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>零件生产数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>零件检测数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>零件合格数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>零件返修数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>零件废品数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>零件漏检数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>零件错检数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>准时出勤人数</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>人员调整处理时间</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>问题处理时间</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>允许公差上限</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>允许公差下限</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>瓶颈时间</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>工位数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>每工站耗费时间</td>
+                                        <td><input></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--车间总览-->
+            <div role="tabpanel" class="tab-pane" id="workshop">
+                <div class="container-fluid">
+                    <div class="col-lg-2">
+                        <select class="selectpicker" data-style="btn-info" title="请选择具体车间">
+                            <option>车间A</option>
+                            <option>车间B</option>
+                            <option>车间C</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-offset-8 col-lg-2">
+                        <button id="btn" type="button"  class="btn btn-info" >&nbsp&nbsp审核数据提交&nbsp&nbsp</button>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="row">
+                            <div class="div_any_child div_review_left_top_height">
+                                <div class="div_any_title "><img src="images/title_2.png">审核人员信息</div>
+                                <div class="table_p" style=" margin-top: 20px;">
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th style="margin-top: 15px; text-align: center"></th>
+                                            <th style="text-align: center"></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td width="50%">姓名</td>
+                                            <td width="50%">王武</td>
+                                        </tr>
+                                        <tr>
+                                            <td>所属部门</td>
+                                            <td>质检部门</td>
+                                        </tr>
+                                        <tr>
+                                            <td>员工ID</td>
+                                            <td>8328</td>
+                                        </tr>
+                                        <tr>
+                                            <td>岗位</td>
+                                            <td>XXXXXX</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="div_any_child div_review_left_buttom_height">
+                                <div class="div_any_title"><img src="images/title_2.png">已有数据</div>
+                                <div class="table_p" style=" margin-top: 20px;">
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th style="margin-top: 15px; text-align: center">数据类型</th>
+                                            <th style="text-align: center">具体数值</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td width="50%">车间开动时间</td>
+                                            <td width="50%">15小时</td>
+                                        </tr>
+                                        <tr>
+                                            <td>车间负荷时间</td>
+                                            <td>5小时</td>
+                                        </tr>
+                                        <tr>
+                                            <td>计划合格品数量</td>
+                                            <td>4500件</td>
+                                        </tr>
+                                        <tr>
+                                            <td>储存库数量</td>
+                                            <td>10000件</td>
+                                        </tr>
+                                        </tr>
+                                        <tr>
+                                            <td>储存容积总量</td>
+                                            <td>100000000立方米</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="div_any_child div_review_right_height">
+                            <div class="div_any_title any_title_width"><img src="images/title_0.png">待审核数据
+                            </div>
+                            <div class="table_p" style=" margin-top: 20px;">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th style="margin-top: 15px; text-align: center">数据类型</th>
+                                        <th style="text-align: center">具体数值</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td width="50%">理论产量</td>
+                                        <td width="50%"><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>设备完好量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    </tr>
+                                    <tr>
+                                        <td>总设备数</td>
+                                        <td><input></td>
+                                    </tr>
+                                    </tr>
+                                    <tr>
+                                        <td>在制品ID</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>在制品生产数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>在制品检测数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>在制品合格数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>在制品返修数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>在制品废品数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>在制品漏检数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>在制品错检数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>员工培训人员数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>员工培训时间</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>允许公差上限</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>允许公差下限</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>增值时间</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>增值时间</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>周期时间</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>库存数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>出库数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>存货总体积数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>距离矩阵</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>流量矩阵</td>
+                                        <td><input></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--工厂总览-->
+            <div role="tabpanel" class="tab-pane" id="factory">
+                <div class="container-fluid">
+                    <div class="col-lg-2">
+                        <select class="selectpicker" data-style="btn-info" title="请选择具体工厂">
+                            <option>工厂A</option>
+                            <option>工厂B</option>
+                            <option>工厂C</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-offset-8 col-lg-2">
+                        <button id="btn" type="button"  class="btn btn-info" >&nbsp&nbsp审核数据提交&nbsp&nbsp</button>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="row">
+                            <div class="div_any_child div_review_left_top_height">
+                                <div class="div_any_title "><img src="images/title_2.png">审核人员信息</div>
+                                <div class="table_p" style=" margin-top: 20px;">
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th style="margin-top: 15px; text-align: center"></th>
+                                            <th style="text-align: center"></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td width="50%">姓名</td>
+                                            <td width="50%">张三</td>
+                                        </tr>
+                                        <tr>
+                                            <td>所属部门</td>
+                                            <td>制造部门</td>
+                                        </tr>
+                                        <tr>
+                                            <td>员工ID</td>
+                                            <td>9528</td>
+                                        </tr>
+                                        <tr>
+                                            <td>岗位</td>
+                                            <td>XXXXXX</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="div_any_child div_review_left_buttom_height">
+                                <div class="div_any_title"><img src="images/title_2.png">已有数据</div>
+                                <div class="table_p" style=" margin-top: 20px;">
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th style="margin-top: 15px; text-align: center">数据类型</th>
+                                            <th style="text-align: center">具体数值</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td width="50%">工厂开动时间</td>
+                                            <td width="50%">12小时</td>
+                                        </tr>
+                                        <tr>
+                                            <td>工厂负荷时间</td>
+                                            <td>10小时</td>
+                                        </tr>
+                                        <tr>
+                                            <td>素养</td>
+                                            <td>90</td>
+                                        </tr>
+                                        <tr>
+                                            <td>业绩</td>
+                                            <td>90</td>
+                                        </tr>
+                                        </tr>
+                                        <tr>
+                                            <td>能力</td>
+                                            <td>95</td>
+                                        </tr>
+                                        </tr>
+                                        <tr>
+                                            <td>学识</td>
+                                            <td>85</td>
+                                        </tr>
+                                        <tr>
+                                            <td>品德</td>
+                                            <td>80</td>
+                                        </tr>
+                                        <tr>
+                                            <td>计划员工培训时间</td>
+                                            <td>20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>计划生产数量</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>员工总数</td>
+                                            <td>1000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>计划配送时间</td>
+                                            <td>1小时</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="div_any_child div_review_right_height">
+                            <div class="div_any_title any_title_width"><img src="images/title_0.png">待审核数据
+                            </div>
+                            <div class="table_p" style=" margin-top: 20px;">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th style="margin-top: 15px; text-align: center">数据类型</th>
+                                        <th style="text-align: center">具体数值</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>理论产量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>设备完好数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    </tr>
+                                    <tr>
+                                        <td>总设备数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    </tr>
+                                    <tr>
+                                        <td>产品ID</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="50%">合格数量</td>
+                                        <td width="50%"><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>生产数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>检测数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>返修数量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>人员质量事故量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>设备质量事故量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>材料质量事故量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>方法质量事故量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>环境质量事故量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>测量质量事故量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>产品成熟度质量事故量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>员工培训时间</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>人才离职人数</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>生产成本</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>允许公差带上限值</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>允许公差带下限值</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>增值时间</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>周期时间</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>运输成本</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>存货持有成本</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>物流管理成本</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>配送时间</td>
+                                        <td><input></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--企业总览-->
+            <div role="tabpanel" class="tab-pane" id="company">
+                <div class="container-fluid">
+                    <div class="col-lg-offset-10 col-lg-2">
+                        <button id="btn" type="button"  class="btn btn-info" >&nbsp&nbsp审核数据提交&nbsp&nbsp</button>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="row">
+                            <div class="div_any_child div_review_left_top_height">
+                                <div class="div_any_title "><img src="images/title_2.png">审核人员信息</div>
+                                <div class="table_p" style=" margin-top: 20px;">
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th style="margin-top: 15px; text-align: center"></th>
+                                            <th style="text-align: center"></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td width="50%">姓名</td>
+                                            <td width="50%">张三</td>
+                                        </tr>
+                                        <tr>
+                                            <td>所属部门</td>
+                                            <td>生产管理部门</td>
+                                        </tr>
+                                        <tr>
+                                            <td>员工ID</td>
+                                            <td>9592</td>
+                                        </tr>
+                                        <tr>
+                                            <td>岗位</td>
+                                            <td>XXXXXX</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="div_any_child div_review_left_buttom_height">
+                                <div class="div_any_title"><img src="images/title_2.png">已有数据</div>
+                                <div class="table_p" style=" margin-top: 20px;">
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th style="margin-top: 15px; text-align: center">数据类型</th>
+                                            <th style="text-align: center">具体数值</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td width="50%">产能</td>
+                                            <td width="50%">11285</td>
+                                        </tr>
+                                        <tr>
+                                            <td>质量</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>成本</td>
+                                            <td>21万/td>
+                                        </tr>
+                                        <tr>
+                                            <td>交付</td>
+                                            <td>100%</td>
+                                        </tr>
+                                        </tr>
+                                        <tr>
+                                            <td>安全</td>
+                                            <td>100</td>
+                                        </tr>
+                                        </tr>
+                                        <tr>
+                                            <td>士气</td>
+                                            <td>20</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="div_any_child div_review_right_height">
+                            <div class="div_any_title any_title_width"><img src="images/title_0.png">待审核数据
+                            </div>
+                            <div class="table_p" style=" margin-top: 20px;">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th style="margin-top: 15px; text-align: center">数据类型</th>
+                                        <th style="text-align: center">具体数值</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td width="50%">销售收入</td>
+                                        <td width="50%"><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>净利润率</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>人均创利</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>库存回转周期</td>
+                                        <td><input></td>
+                                    </tr>
+                                    </tr>
+                                    <tr>
+                                        <td>资金流入</td>
+                                        <td><input></td>
+                                    </tr>
+                                    </tr>
+                                    <tr>
+                                        <td>资金流出</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>新增订单额</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>财务费用控制率</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>投资预算达成率</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>工艺节约资金</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>研发预算偏差量</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>研发计划达标完成率</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>定制型产品设计及时率</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>材料得率</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>采购价格节约率</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>销售成本率</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>采购价格节约率</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>库存资金周转率</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>元件进场检核合格率</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>万元产值能耗</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>不合格品处理及时率</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>成品库存控制</td>
+                                        <td><input></td>
+                                    </tr>
+                                    <tr>
+                                        <td>材料消耗品</td>
+                                        <td><input></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<script src="js/le/station_equipment.js"></script>
+<!-- jquery
+============================================ -->
+<script src="js/vendor/jquery-1.12.4.min.js"></script>
+<!-- bootstrap JS
+    ============================================ -->
+<script src="js/bootstrap.min.js"></script>
+<!-- wow JS
+    ============================================ -->
+<script src="js/wow.min.js"></script>
+<!-- price-slider JS
+    ============================================ -->
+<script src="js/jquery-price-slider.js"></script>
+<!-- meanmenu JS
+    ============================================ -->
+<script src="js/jquery.meanmenu.js"></script>
+<!-- owl.carousel JS
+    ============================================ -->
+<script src="js/owl.carousel.min.js"></script>
+<!-- sticky JS
+    ============================================ -->
+<script src="js/jquery.sticky.js"></script>
+<!-- scrollUp JS
+    ============================================ -->
+<script src="js/jquery.scrollUp.min.js"></script>
+<!-- counterup JS
+    ============================================ -->
+<script src="js/counterup/jquery.counterup.min.js"></script>
+<script src="js/counterup/waypoints.min.js"></script>
+<script src="js/counterup/counterup-active.js"></script>
+<!-- mCustomScrollbar JS
+    ============================================ -->
+<script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/scrollbar/mCustomScrollbar-active.js"></script>
+<!-- metisMenu JS
+    ============================================ -->
+<script src="js/metisMenu/metisMenu.min.js"></script>
+<script src="js/metisMenu/metisMenu-active.js"></script>
+<!-- morrisjs JS
+    ============================================ -->
+<script src="js/morrisjs/raphael-min.js"></script>
+<script src="js/morrisjs/morris.js"></script>
+<script src="js/morrisjs/morris-active.js"></script>
+<!-- morrisjs JS
+    ============================================ -->
+<script src="js/sparkline/jquery.sparkline.min.js"></script>
+<script src="js/sparkline/jquery.charts-sparkline.js"></script>
+<script src="js/sparkline/sparkline-active.js"></script>
+<!-- calendar JS
+    ============================================ -->
+<script src="js/calendar/moment.min.js"></script>
+<script src="js/calendar/fullcalendar.min.js"></script>
+<script src="js/calendar/fullcalendar-active.js"></script>
+<!-- plugins JS
+    ============================================ -->
+<script src="js/plugins.js"></script>
+<!-- main JS
+    ============================================ -->
+<script src="js/main.js"></script>
+<!-- tawk chat JS
+    ============================================ -->
+
+
+<script src="js/le/factory_equipment.js"></script>
+<script src="js/le/factory_process.js"></script>
+
+</body>
+
+</html>

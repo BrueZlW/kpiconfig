@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>智能KPI 工厂V1.0</title>
+    <!-- ---------------添加开始 ------------------->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/commen_quality.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <!-- <script src="js/flexible.js"></script> -->
+<!--    <script src="js/quality1.js"></script>-->
+<!--    <script src="js/le/factory_equipment.js"></script>-->
+    <script src="js/boot_demo0802.js"></script>
+<!--    <script src="js/zonglan.js"></script>-->
+<!--    <script src="js/logistic_factory.js"></script>-->
+
+<!--    <script src="js/persongcChart.js"></script>-->
+    <script src="js/qiyeKPI.js"></script>
+    <script src="js/toSupport.js"></script>
+
+    <script src="layer/layer.js"></script>
+    <script src="layer/extend/layer.ext.js"></script>
+
+    <script src="layer/layer.js"></script>
+    <script src="layer/extend/layer.ext.js"></script>
+
+    <!-- ---------------添加结束 ------------------->
+
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+		============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Google Fonts
+            ============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- normalize CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- meanmenu icon CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <!-- main CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- educate icon CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/educate-custon-icon.css">
+    <!-- mCustomScrollbar CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- metisMenu CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="css/metisMenu/metisMenu-vertical.css">
+    <!-- style CSS
+            ============================================ -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- responsive CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- modernizr JS
+            ============================================ -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <!--分层审核css-->
+    <link rel="stylesheet" href="css/le/layeredReview.css">
+
+
+    <!-- zrh模板 引用的 -->
+    <link href="styles/common.css" rel="stylesheet">
+    <script src="scripts/Plugin/jquery-3.3.1.min.js"></script>
+    <script src="scripts/Plugin/echarts.min.js"></script>
+    <script src="scripts/common.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/Plugin/laydate/laydate.js"></script>
+</head>
+
+<body>
+    <!--start 左边菜单栏  -->
+    <div class="left-sidebar-pro">
+        <nav id="sidebar" class="">
+            <!--左边的公司logo -->
+            <div class="sidebar-header">
+                <a href="index.html"><img class="main-logo" src="img/logo/combini-small.JPG" alt="" /></a>
+
+            </div>
+
+            <div class="left-custom-menu-adp-wrap comment-scrollbar">
+                <nav class="sidebar-nav left-sidebar-menu-pro">
+                    <!-- 整个左边菜单栏，四个层级，工厂、车间、产线、工位 -->
+                    <ul class="metismenu" id="menu1">
+                        <!-- 套娃 -->
+                        <li class="active">
+                            <!--这个active是不隐藏底下的子栏目，默认是隐藏的-->
+                            <a class="has-arrow" href="companyKPI.html">
+                                <span class="educate-icon educate-home icon-wrap"></span>
+                                <span class="icon-wrap" id="company-jump">企业KPI</span>
+                                <!-- <span class="mini-click-non fa fa-home fa-4x">&nbsp智能KPI</span> -->
+                            </a>
+                            <ul class="submenu-angle" aria-expanded="true">
+                                <li class="active">
+                                    <a title="工厂1" class="has-arrow" href="index-factory.html" style="background:#081832 !important;">
+                                        <span class="mini-sub-pro fa fa-industry fa-3x"
+                                            id="factory-jump1"  style="color: pink;font-weight: bolder">&nbsp&nbsp工厂1</span>
+                                    </a>
+                                    <ul>
+                                        <li class="active">
+                                            <a title="车间1" class="has-arrow" href="index-workshop.html">&nbsp&nbsp<span
+                                                    class="mini-sub-pro fa fa-indent fa-2x"
+                                                    id="workshop-jump1-1">&nbsp&nbsp车间1</span></a>
+                                            <ul>
+                                                <li class="active">
+                                                    <a title="产线1" class="has-arrow"
+                                                        href="index-line.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-line-chart"
+                                                            id="line-jump1-1-1">&nbsp&nbsp产线1</span></a>
+                                                    <ul>
+                                                        <li><a href="index-workstation.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male"
+                                                                    id="workstation-jump1-1-1-1">&nbsp&nbsp工位1</span></a>
+                                                        </li>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male"
+                                                                    id="workstation-jump1-1-1-2">&nbsp&nbsp工位2</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="active">
+                                                    <a title="产线2" class="has-arrow"
+                                                        href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-line-chart"
+                                                            id="line-jump1-1-2">&nbsp&nbsp产线2</span></a>
+                                                    <ul>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male"
+                                                                    id="workstation-jump1-1-2-1">&nbsp&nbsp工位1</span></a>
+                                                        </li>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male"
+                                                                    id="workstation-jump1-1-2-2">&nbsp&nbsp工位2</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="active">
+                                            <a title="车间2" class="has-arrow" href="index.html">&nbsp&nbsp<span
+                                                    class="mini-sub-pro fa fa-indent fa-2x"
+                                                    id="workshop-jump1-2">&nbsp&nbsp车间2</span></a>
+                                            <ul>
+                                                <li class="active">
+                                                    <a title="产线1" class="has-arrow"
+                                                        href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-line-chart"
+                                                            id="line-jump1-2-1">&nbsp&nbsp产线1</span></a>
+                                                    <ul>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male"
+                                                                    id="workstation-jump1-2-1-1">&nbsp&nbsp工位1</span></a>
+                                                        </li>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male"
+                                                                    id="workstation-jump1-2-1-2">&nbsp&nbsp工位2</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="active">
+                                                    <a title="产线2" class="has-arrow"
+                                                        href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-line-chart"
+                                                            id="line-jump1-2-2">&nbsp&nbsp产线2</span></a>
+                                                    <ul>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male"
+                                                                    id="workstation-jump1-2-2-1">&nbsp&nbsp工位1</span></a>
+                                                        </li>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male"
+                                                                    id="workstation-jump1-2-2-2">&nbsp&nbsp工位2</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+
+                                </li>
+
+                                <li>
+                                    <a title="工厂2" class="has-arrow" href="index.html">
+                                        <span class="mini-sub-pro fa fa-industry fa-3x">&nbsp&nbsp工厂2</span>
+                                    </a>
+                                    <ul>
+                                        <li class="active">
+                                            <a title="车间1" class="has-arrow" href="index.html">&nbsp&nbsp<span
+                                                    class="mini-sub-pro fa fa-indent fa-2x">&nbsp&nbsp车间1</span></a>
+                                            <ul>
+                                                <li class="active">
+                                                    <a title="产线1" class="has-arrow"
+                                                        href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-line-chart">&nbsp&nbsp产线1</span></a>
+                                                    <ul>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male">&nbsp&nbsp工位1</span></a>
+                                                        </li>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male">&nbsp&nbsp工位2</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="active">
+                                                    <a title="产线2" class="has-arrow"
+                                                        href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-line-chart">&nbsp&nbsp产线2</span></a>
+                                                    <ul>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male">&nbsp&nbsp工位1</span></a>
+                                                        </li>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male">&nbsp&nbsp工位2</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="active">
+                                            <a title="车间2" class="has-arrow" href="index.html">&nbsp&nbsp<span
+                                                    class="mini-sub-pro fa fa-indent fa-2x">&nbsp&nbsp车间2</span></a>
+                                            <ul>
+                                                <li class="active">
+                                                    <a title="产线1" class="has-arrow"
+                                                        href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-line-chart">&nbsp&nbsp产线1</span></a>
+                                                    <ul>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male">&nbsp&nbsp工位1</span></a>
+                                                        </li>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male">&nbsp&nbsp工位2</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="active">
+                                                    <a title="产线2" class="has-arrow"
+                                                        href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-line-chart">&nbsp&nbsp产线2</span></a>
+                                                    <ul>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male">&nbsp&nbsp工位1</span></a>
+                                                        </li>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male">&nbsp&nbsp工位2</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                    </ul>
+
+
+
+
+                </nav>
+            </div>
+        </nav>
+    </div>
+    <!-- End 左边菜单栏 -->
+
+    <!-- start 右边部分 -->
+    <div class="all-content-wrapper">
+        <!-- 第一大行 系统名称 -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="div_any_child_systemname">
+                        <div class="div_any_title_systemname">智能KPI管理系统</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 系统名称结束 -->
+
+        <!-- start 第二行 人员、设备、过程、质量、物流等菜单栏 -->
+        <div class="header-advance-area">
+            <div class="header-top-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="header-top-wraper">
+                                <div class="row">
+                                    <!-- 隐藏侧边栏 -->
+                                    <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
+                                        <div class="menu-switcher-pro">
+                                            <button type="button" id="sidebarCollapse"
+                                                class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
+                                                <i class="educate-icon  educate-nav"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-10 col-md-12 col-sm-8 col-xs-12">
+                                        <div class="header-top-menu tabl-d-n">
+                                            <ul class="nav nav-pills" role="tablist">
+                                                <li role="presentation" class="active"><a href="#home"
+                                                        aria-controls="home" role="tab" data-toggle="tab">总览</a></li>
+                                                <li role="presentation"><a href="#person" aria-controls="profile"
+                                                        role="tab" data-toggle="tab">人员KPI</a></li>
+                                                <li role="presentation"><a href="#equipment" aria-controls="messages"
+                                                        role="tab" data-toggle="tab">设备KPI</a></li>
+                                                <li role="presentation"><a href="#process" aria-controls="settings"
+                                                        role="tab" data-toggle="tab">过程KPI</a></li>
+                                                <li role="presentation"><a href="#quality" aria-controls="settings"
+                                                        role="tab" data-toggle="tab">质量KPI</a></li>
+                                                <li role="presentation"><a href="#logistics" aria-controls="settings"
+                                                        role="tab" data-toggle="tab">物流KPI</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
+                                        <div class="menu-switcher-pro">
+                                            <button type="button"
+                                                class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
+                                                <i class="fa fa-support" onclick="to(this)">&nbspKPI优化支持</i>
+                                            </button>
+                                            <!-- <span>A3报告导出</span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end 第二行 人员、设备、过程、质量、物流等菜单栏 -->
+
+        <!-- 展示数据的区域 分三块 -->
+        <div class="datashow-area">
+            <div class="tab-content">
+                <!--总览-->
+                <div role="tabpanel" class="tab-pane active" id="home">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <!--                        指标变化框-->
+                            <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
+                                <div class="div_any_child_1 div_height_layered_2">
+                                    <div class="div_any_title any_title_width"><img src="images/title_0.png">指标变化
+                                    </div>
+                                    <div class="row ">
+                                        <div style="margin:25px 15px 15px 15px;" id="change">
+                                        </div>
+
+
+
+                                        <!--指标变换的弹窗-->
+                                        <!--                                        <div id="workshop_change_output" style="display: none;">-->
+                                        <!--                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " >-->
+                                        <!--                                                <div id="workshop_layer_plannedOutput" style="width:390px;height:360px;display: inline-block;padding-left:1%;padding-right:1%;padding-top:5%;">-->
+                                        <!--                                                </div>-->
+                                        <!--                                            </div>-->
+                                        <!--                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " >-->
+                                        <!--                                                <div  id="workshop_layer_output" style="width:390px;height:360px;display: inline-block;padding-left:1%;padding-right:1%;padding-top:5%">-->
+                                        <!--                                                </div>-->
+                                        <!--                                            </div>-->
+                                        <!--                                        </div>-->
+                                        <!--                                        <div id="workshop_change_notgood"  style="display: none">-->
+                                        <!--                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " >-->
+                                        <!--                                                <div id="workshop_layer_notgood" style="width:390px;height:360px;display: inline-block;padding-left:1%;padding-right:1%;padding-top:5%">-->
+                                        <!--                                                </div>-->
+                                        <!--                                            </div>-->
+                                        <!--                                        </div>-->
+                                        <!--                                        <div id="workshop_change_oee"  style="display: none">-->
+                                        <!--                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " >-->
+                                        <!--                                                <div id="workshop_layer_??" style="width:390px;height:360px;display: inline-block;padding-left:1%;padding-right:1%;padding-top:5%">-->
+                                        <!--                                                </div>-->
+                                        <!--                                            </div>-->
+                                        <!--                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " >-->
+                                        <!--                                                <div  id="workshop_layer_???" style="width:390px;height:360px;display: inline-block;padding-left:1%;padding-right:1%;padding-top:5%">-->
+                                        <!--                                                </div>-->
+                                        <!--                                            </div>-->
+                                        <!--                                        </div>-->
+                                        <!--                                        <div id="workshop_change_storage"  style="display: none">-->
+                                        <!--                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " >-->
+                                        <!--                                                <div id="workshop_layer_?" style="width:390px;height:360px;display: inline-block;padding-left:1%;padding-right:1%;padding-top:5%">-->
+                                        <!--                                                </div>-->
+                                        <!--                                            </div>-->
+                                        <!--                                        </div>-->
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <!--                        工厂布局图的框-->
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                <div class="div_any_child_gongchangbuju div_height_layered_1 ">
+                                    <div class="div_any_title any_title_width"><img src="images/title_0.png">工厂布局图
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="bujuzhibiaokuang">
+                                                <button type="button" id="syj-1"
+                                                        class="btn bar-button-pro-syj-1 header-drl-controller-btn btn-info navbar-btn">
+                                                    <i class="fa fa-dot-circle-o">返回上一级</i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="bujuzhibiaokuang">
+                                                <button type="button" id="gcbj-1"
+                                                        class="btn bar-button-pro-gcbuju-1 header-drl-controller-btn btn-info navbar-btn">
+                                                    <i class="fa fa-dot-circle-o">&nbsp当前产量：</i>
+                                                    <span id="gongchangbuju-1">90件</span>
+                                                </button>
+                                            </div>
+                                            <div class="bujuzhibiaokuang">
+                                                <button type="button" id="gcbj-2"
+                                                        class="btn bar-button-pro-gcbuju-2 header-drl-controller-btn btn-info navbar-btn">
+                                                    <i class="fa fa-dot-circle-o">&nbsp成品一检合格数：</i>
+                                                    <span id="gongchangbuju-2">70件</span>
+                                                </button>
+                                            </div>
+                                            <div class="bujuzhibiaokuang">
+                                                <button type="button" id="gcbj-3"
+                                                        class="btn bar-button-pro-gcbuju-3 header-drl-controller-btn btn-info navbar-btn">
+                                                    <i class="fa fa-dot-circle-o">&nbsp返工数：</i>
+                                                    <span id="gongchangbuju-3">7件</span>
+                                                </button>
+                                            </div>
+                                            <div class="bujuzhibiaokuang">
+                                                <button type="button" id="gcbj-4"
+                                                        class="btn bar-button-pro-gcbuju-4 header-drl-controller-btn btn-info navbar-btn">
+                                                    <i class="fa fa-dot-circle-o">&nbsp质量事故量：</i>
+                                                    <span id="gongchangbuju-4">3 件</span>
+                                                </button>
+                                            </div>
+                                            <div class="bujuzhibiaokuang">
+                                                <button type="button" id="gcbj-5"
+                                                        class="btn bar-button-pro-gcbuju-5 header-drl-controller-btn btn-info navbar-btn">
+                                                    <i class="fa fa-dot-circle-o">&nbspOEE：</i>
+                                                    <span id="gongchangbuju-5">89%</span>
+                                                </button>
+                                            </div>
+                                            <div class="bujuzhibiaokuang">
+                                                <button type="button" id="gcbj-6"
+                                                        class="btn bar-button-pro-gcbuju-6 header-drl-controller-btn btn-info navbar-btn">
+                                                    <i class="fa fa-dot-circle-o">&nbsp按时交货率：</i>
+                                                    <span id="gongchangbuju-6">75%</span>
+                                                </button>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="goworkshop-1">
+                                                <a class="url" href="index-workshop.html" ></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="goworkshop-2">
+                                                <a class="url" href="index-workshop.html" ></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="row">
+
+                            <!--                        优化任务框-->
+                            <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
+                                <div class="div_any_child div_height_layered_1 ">
+                                    <div class="div_any_title any_title_width"><img src="images/title_0.png">优化任务
+                                    </div>
+                                    <div class="table_p" style=" margin-top: 20px;">
+                                        <table>
+                                            <thead>
+                                            <tr>
+                                                <th style="margin-top: 15px; text-align: center;height: 50px" width="15%">优化指标</th>
+                                                <th style="text-align: center" width="10%">优化时间</th>
+                                                <th style="text-align: center" width="10%">责任人</th>
+                                                <th colspan="2" style="text-align: center">优化措施</th>
+                                                <th style="text-align: center" width="15%">优化进度</th>
+                                                <th style="text-align: center" width="10%">审核</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+
+
+                                            <tr>
+                                                <td style="height: 40px">产量</td>
+                                                <td>2020-10-24</td>
+                                                <td>张三</td>
+                                                <td colspan="2"> <p><center>合理安排不同产线的加工顺序<br>安排合理的物流和仓储，适应新的生产计划</center></p></td>
+                                                <td>
+                                                    <div class="progress">
+                                                        <span class="red" style="width: 25%;" ><span>25%</span></span>
+                                                    </div>
+                                                </td>
+                                                <td><input type="checkbox" style="height: 20px"></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="height: 40px">设备开动率</td>
+                                                <td>2020-10-24</td>
+                                                <td>李四</td>
+                                                <td colspan="2"> <p><center>更换本次生产联轴材料，采用不易软化，加工硬化明显的材料<br>对生产新型发动机的产线员工进行培训</center></p></td>
+                                                <td>
+
+                                                    <div class="progress">
+                                                        <span class="orange" style="width: 50%;" ><span>50%</span></span>
+                                                    </div>
+                                                </td>
+                                                <td><input type="checkbox" style="height: 20px"></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="height: 40px">不良品数</td>
+                                                <td>2020-10-24</td>
+                                                <td>韩五</td>
+                                                <td colspan="2"> <p><center>离合器片加工机床主轴回转精度较大<br>预算采购新型精密机床（5万）</center></p></td>
+                                                <td>
+
+                                                    <div class="progress">
+                                                        <span class="green" style="width: 75%;" ><span>75%</span></span>
+                                                    </div>                                                </td>
+                                                <td><input type="checkbox" style="height: 20px"></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="height: 40px">产量</td>
+                                                <td>2020-10-24</td>
+                                                <td>张三</td>
+                                                <td colspan="2"> <p><center>重型汽车产量减少，曲轴需求降低<br>根据下月利润，调整汽车类型生产</center></p></td>
+                                                <td>
+
+                                                    <div class="progress">
+                                                        <span class="blue" style="width: 100%;" ><span>100%</span></span>
+                                                    </div>
+                                                </td>
+                                                <td><input type="checkbox" style="height: 20px"></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="height: 40px">设备开动率</td>
+                                                <td>2020-10-24</td>
+                                                <td>李四</td>
+                                                <td colspan="2"> <p><center>合理安排每条产线每月产量<br>根据下个月反馈数据，再进行产线产量调整</center></p></td>
+                                                <td>
+
+                                                    <div class="progress">
+                                                        <span class="orange" style="width: 50%;" ><span>50%</span></span>
+                                                    </div>
+                                                </td>
+                                                <td><input type="checkbox" style="height: 20px"></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="height: 40px">不良品数</td>
+                                                <td>2020-10-24</td>
+                                                <td>韩五</td>
+                                                <td colspan="2"> <p><center>提高变速杆生产的尺寸精度</center></p></td>
+                                                <td>
+                                                    <div class="progress">
+                                                        <span class="green" style="width: 75%;" ><span>75%</span></span>
+                                                    </div>
+                                                </td>
+                                                <td><input type="checkbox" style="height: 20px"></td>
+                                            </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--                        总KPI框-->
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                <div class="div_any_child div_height_layered_1">
+                                    <div class="div_any_title any_title_width"><img src="images/title_0.png">总KPI
+                                    </div>
+                                    <div id="zonglan_factory"
+                                         style="width:85%;height:100%;display: inline-block;padding-left:5%;padding-right:1.25%;padding-top:10%">
+                                    </div>
+                                    <!--雷达图的弹窗-->
+                                    <!--                                    <div id="chanliang"  style="display: none">-->
+                                    <!--                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " >-->
+                                    <!--                                            <div id="shop_kpi17" style="width:390px;height:360px;display: inline-block;padding-left:1%;padding-right:1%;padding-top:5%">-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </div>-->
+                                    <!--                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " >-->
+                                    <!--                                            <div  id="shop_kpi18" style="width:390px;height:360px;display: inline-block;padding-left:1%;padding-right:1%;padding-top:5%">-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </div>-->
+                                    <!--                                    </div>-->
+                                    <!--                                    <div id="zhiliang"  style="display: none">-->
+                                    <!--                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " >-->
+                                    <!--                                            <div id="shop_kpi19" style="width:390px;height:360px;display: inline-block;padding-left:1%;padding-right:1%;padding-top:5%">-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </div>-->
+                                    <!--                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " >-->
+                                    <!--                                            <div  id="shop_kpi20" style="width:390px;height:360px;display: inline-block;padding-left:1%;padding-right:1%;padding-top:5%">-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </div>-->
+                                    <!--                                    </div>-->
+                                    <!--                                    <div id="shiqi"  style="display: none">-->
+                                    <!--                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " >-->
+                                    <!--                                            <div id="shop_kpi21" style="width:390px;height:360px;display: inline-block;padding-left:1%;padding-right:1%;padding-top:5%">-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </div>-->
+                                    <!--                                    </div>-->
+                                    <!--                                    <div id="chengbeng"  style="display: none">-->
+                                    <!--                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 " >-->
+                                    <!--                                            <div id="shop_kpi22" style="width:390px;height:360px;display: inline-block;padding-left:1%;padding-right:1%;padding-top:5%">-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </div>-->
+                                    <!--                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 " >-->
+                                    <!--                                            <div id="shop_kpi23" style="width:390px;height:360px;display: inline-block;padding-left:1%;padding-right:1%;padding-top:5%">-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </div>-->
+                                    <!--                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 " >-->
+                                    <!--                                            <div id="shop_kpi24" style="width:390px;height:360px;display: inline-block;padding-left:1%;padding-right:1%;padding-top:5%">-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </div>-->
+                                    <!--                                    </div>-->
+                                    <!--                                    <div id="cailiaodelv"  style="display: none">-->
+                                    <!--                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " >-->
+                                    <!--                                            <div id="shop_kpi25" style="width:390px;height:360px;display: inline-block;padding-left:1%;padding-right:1%;padding-top:5%">-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </div>-->
+                                    <!--                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " >-->
+                                    <!--                                            <div  id="shop_kpi26" style="width:390px;height:360px;display: inline-block;padding-left:1%;padding-right:1%;padding-top:5%">-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </div>-->
+                                    <!--                                    </div>-->
+                                    <!--                                    <div id="zhizaofeiyong"  style="display: none">-->
+                                    <!--                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " >-->
+                                    <!--                                            <div id="shop_kpi27" style="width:390px;height:360px;display: inline-block;padding-left:1%;padding-right:1%;padding-top:5%">-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </div>-->
+                                    <!--                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " >-->
+                                    <!--                                            <div  id="shop_kpi28" style="width:390px;height:360px;display: inline-block;padding-left:1%;padding-right:1%;padding-top:5%">-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </div>-->
+                                    <!--                                    </div>-->
+                                    <!--                                    <div id="anquan"  style="display: none">-->
+                                    <!--                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " >-->
+                                    <!--                                            <div id="shop_kpi29" style="width:390px;height:360px;display: inline-block;padding-left:1%;padding-right:1%;padding-top:5%">-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </div>-->
+                                    <!--                                    </div>-->
+                                    <!--                                    <div id="jiaofu"  style="display: none">-->
+                                    <!--                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " >-->
+                                    <!--                                            <div id="shop_kpi30" style="width:390px;height:360px;display: inline-block;padding-left:1%;padding-right:1%;padding-top:5%">-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </div>-->
+                                    <!--                                    </div>-->
+                                    <!--                                    <div id="jiaofulv"  style="display: none">-->
+                                    <!--                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " >-->
+                                    <!--                                            <div id="shop_kpi31" style="width:390px;height:360px;display: inline-block;padding-left:1%;padding-right:1%;padding-top:5%">-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </div>-->
+                                    <!--                                    </div>-->
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <!--人员-->
+                <div role="tabpanel" class="tab-pane" id="person">
+                    <div class="container-fluid">
+                        <div class="row">
+                        </div>
+                    </div>
+                </div>
+
+                <!--设备-->
+                <div role="tabpanel" class="tab-pane" id="equipment">
+                    <div class="container-fluid">
+                        <div class="row">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--过程-->
+                <div role="tabpanel" class="tab-pane" id="process">
+                    <div class="container-fluid">
+                        <div class="row">
+                        </div>
+                    </div>
+                </div>
+                <!--质量-->
+                <div role="tabpanel" class="tab-pane" id="quality">
+                    <div class="container-fluid">
+                        <div class="row">
+                        </div>
+                    </div>
+                </div>
+                <!--物流-->
+                <div role="tabpanel" class="tab-pane" id="logistics">
+                    <div class="container-fluid">
+                        <div class="row">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <!-- jquery
+    ============================================ -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap JS
+        ============================================ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- wow JS
+        ============================================ -->
+    <script src="js/wow.min.js"></script>
+    <!-- price-slider JS
+        ============================================ -->
+    <script src="js/jquery-price-slider.js"></script>
+    <!-- meanmenu JS
+        ============================================ -->
+    <script src="js/jquery.meanmenu.js"></script>
+    <!-- owl.carousel JS
+        ============================================ -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- sticky JS
+        ============================================ -->
+    <script src="js/jquery.sticky.js"></script>
+    <!-- scrollUp JS
+        ============================================ -->
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <!-- counterup JS
+        ============================================ -->
+    <script src="js/counterup/jquery.counterup.min.js"></script>
+    <script src="js/counterup/waypoints.min.js"></script>
+    <script src="js/counterup/counterup-active.js"></script>
+    <!-- mCustomScrollbar JS
+        ============================================ -->
+    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/scrollbar/mCustomScrollbar-active.js"></script>
+    <!-- metisMenu JS
+        ============================================ -->
+    <script src="js/metisMenu/metisMenu.min.js"></script>
+    <script src="js/metisMenu/metisMenu-active.js"></script>
+    <!-- morrisjs JS
+        ============================================ -->
+    <script src="js/morrisjs/raphael-min.js"></script>
+    <script src="js/morrisjs/morris.js"></script>
+    <script src="js/morrisjs/morris-active.js"></script>
+    <!-- morrisjs JS
+        ============================================ -->
+    <script src="js/sparkline/jquery.sparkline.min.js"></script>
+    <script src="js/sparkline/jquery.charts-sparkline.js"></script>
+    <script src="js/sparkline/sparkline-active.js"></script>
+    <!-- calendar JS
+        ============================================ -->
+    <script src="js/calendar/moment.min.js"></script>
+    <script src="js/calendar/fullcalendar.min.js"></script>
+    <script src="js/calendar/fullcalendar-active.js"></script>
+    <!-- plugins JS
+        ============================================ -->
+    <script src="js/plugins.js"></script>
+    <!-- main JS
+        ============================================ -->
+    <script src="js/main.js"></script>
+    <!-- tawk chat JS
+        ============================================ -->
+
+
+
+<!--    <script src="js/le/factory_layeredReview.js"></script>-->
+    <script src="js/le/TABconfiguration.js"></script>
+    <script src="js/le/generateCharts.js"></script>
+
+</body>
+
+</html>

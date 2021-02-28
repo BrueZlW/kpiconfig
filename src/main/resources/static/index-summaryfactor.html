@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>智能KPI 工厂V1.0</title>
+    <!-- ---------------添加开始 ------------------->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/commen_quality.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <!-- <script src="js/flexible.js"></script> -->
+    <script src="js/quality1.js"></script>
+    <script src="js/le/factory_equipment.js"></script>
+    <script src="js/boot_demo0802.js"></script>
+    <script src="js/zonglan.js"></script>
+    <script src="js/logistic_1.js"></script>
+
+    <script src="js/persongcChart.js"></script>
+    <script src="js/qiyeKPI.js"></script>
+
+    <script src="layer/layer.js"></script>
+    <script src="layer/extend/layer.ext.js"></script>
+
+    <script src="layer/layer.js"></script>
+    <script src="layer/extend/layer.ext.js"></script>
+
+    <!-- ---------------添加结束 ------------------->
+
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+		============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Google Fonts
+            ============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- normalize CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- meanmenu icon CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <!-- main CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- educate icon CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/educate-custon-icon.css">
+    <!-- mCustomScrollbar CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- metisMenu CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="css/metisMenu/metisMenu-vertical.css">
+    <!-- style CSS
+            ============================================ -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- responsive CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- modernizr JS
+            ============================================ -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <!-- zrh模板 引用的 -->
+    <link href="styles/common.css" rel="stylesheet">
+    <script src="scripts/Plugin/jquery-3.3.1.min.js"></script>
+    <script src="scripts/Plugin/echarts.min.js"></script>
+    <script src="scripts/common.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/Plugin/laydate/laydate.js"></script>
+</head>
+
+<body>
+    <!--start 左边菜单栏  -->
+    <div class="left-sidebar-pro">
+        <nav id="sidebar" class="">
+            <!--左边的公司logo -->
+            <div class="sidebar-header">
+                <a href="index.html"><img class="main-logo" src="img/logo/combini-small.JPG" alt="" /></a>
+
+            </div>
+
+            <div class="left-custom-menu-adp-wrap comment-scrollbar">
+                <nav class="sidebar-nav left-sidebar-menu-pro">
+                    <!-- 整个左边菜单栏，四个层级，工厂、车间、产线、工位 -->
+                    <ul class="metismenu" id="menu1">
+                        <!-- 套娃 -->
+                        <li class="active">
+                            <!--这个active是不隐藏底下的子栏目，默认是隐藏的-->
+                            <a class="has-arrow" href="index-factory.html">
+                                <span class="educate-icon educate-home icon-wrap"></span>
+                                <span class="icon-wrap">企业KPI</span>
+                                <!-- <span class="mini-click-non fa fa-home fa-4x">&nbsp智能KPI</span> -->
+                            </a>
+                            <ul class="submenu-angle" aria-expanded="true">
+                                <li class="active">
+                                    <a title="工厂1" class="has-arrow" href="index-factory.html">
+                                        <span class="mini-sub-pro fa fa-industry fa-3x"
+                                            id="factory-jump1">&nbsp&nbsp工厂1</span>
+                                    </a>
+                                    <ul>
+                                        <li class="active">
+                                            <a title="车间1" class="has-arrow" href="index-workshop.html">&nbsp&nbsp<span
+                                                    class="mini-sub-pro fa fa-indent fa-2x"
+                                                    id="workshop-jump1-1">&nbsp&nbsp车间1</span></a>
+                                            <ul>
+                                                <li class="active">
+                                                    <a title="产线1" class="has-arrow"
+                                                        href="index-line.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-line-chart"
+                                                            id="line-jump1-1-1">&nbsp&nbsp产线1</span></a>
+                                                    <ul>
+                                                        <li><a href="index-workstation.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male"
+                                                                    id="workstation-jump1-1-1-1">&nbsp&nbsp工位1</span></a>
+                                                        </li>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male"
+                                                                    id="workstation-jump1-1-1-2">&nbsp&nbsp工位2</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="active">
+                                                    <a title="产线2" class="has-arrow"
+                                                        href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-line-chart"
+                                                            id="line-jump1-1-2">&nbsp&nbsp产线2</span></a>
+                                                    <ul>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male"
+                                                                    id="workstation-jump1-1-2-1">&nbsp&nbsp工位1</span></a>
+                                                        </li>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male"
+                                                                    id="workstation-jump1-1-2-2">&nbsp&nbsp工位2</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="active">
+                                            <a title="车间2" class="has-arrow" href="index.html">&nbsp&nbsp<span
+                                                    class="mini-sub-pro fa fa-indent fa-2x"
+                                                    id="workshop-jump1-2">&nbsp&nbsp车间2</span></a>
+                                            <ul>
+                                                <li class="active">
+                                                    <a title="产线1" class="has-arrow"
+                                                        href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-line-chart"
+                                                            id="line-jump1-2-1">&nbsp&nbsp产线1</span></a>
+                                                    <ul>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male"
+                                                                    id="workstation-jump1-2-1-1">&nbsp&nbsp工位1</span></a>
+                                                        </li>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male"
+                                                                    id="workstation-jump1-2-1-2">&nbsp&nbsp工位2</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="active">
+                                                    <a title="产线2" class="has-arrow"
+                                                        href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-line-chart"
+                                                            id="line-jump1-2-2">&nbsp&nbsp产线2</span></a>
+                                                    <ul>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male"
+                                                                    id="workstation-jump1-2-2-1">&nbsp&nbsp工位1</span></a>
+                                                        </li>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male"
+                                                                    id="workstation-jump1-2-2-2">&nbsp&nbsp工位2</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+
+                                </li>
+
+                                <li>
+                                    <a title="工厂2" class="has-arrow" href="index.html">
+                                        <span class="mini-sub-pro fa fa-industry fa-3x">&nbsp&nbsp工厂2</span>
+                                    </a>
+                                    <ul>
+                                        <li class="active">
+                                            <a title="车间1" class="has-arrow" href="index.html">&nbsp&nbsp<span
+                                                    class="mini-sub-pro fa fa-indent fa-2x">&nbsp&nbsp车间1</span></a>
+                                            <ul>
+                                                <li class="active">
+                                                    <a title="产线1" class="has-arrow"
+                                                        href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-line-chart">&nbsp&nbsp产线1</span></a>
+                                                    <ul>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male">&nbsp&nbsp工位1</span></a>
+                                                        </li>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male">&nbsp&nbsp工位2</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="active">
+                                                    <a title="产线2" class="has-arrow"
+                                                        href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-line-chart">&nbsp&nbsp产线2</span></a>
+                                                    <ul>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male">&nbsp&nbsp工位1</span></a>
+                                                        </li>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male">&nbsp&nbsp工位2</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="active">
+                                            <a title="车间2" class="has-arrow" href="index.html">&nbsp&nbsp<span
+                                                    class="mini-sub-pro fa fa-indent fa-2x">&nbsp&nbsp车间2</span></a>
+                                            <ul>
+                                                <li class="active">
+                                                    <a title="产线1" class="has-arrow"
+                                                        href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-line-chart">&nbsp&nbsp产线1</span></a>
+                                                    <ul>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male">&nbsp&nbsp工位1</span></a>
+                                                        </li>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male">&nbsp&nbsp工位2</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="active">
+                                                    <a title="产线2" class="has-arrow"
+                                                        href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-line-chart">&nbsp&nbsp产线2</span></a>
+                                                    <ul>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male">&nbsp&nbsp工位1</span></a>
+                                                        </li>
+                                                        <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                                    class="mini-sub-pro fa fa-male">&nbsp&nbsp工位2</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                    </ul>
+
+
+
+
+                </nav>
+            </div>
+        </nav>
+    </div>
+    <!-- End 左边菜单栏 -->
+
+    <!-- start 右边部分 -->
+    <div class="all-content-wrapper">
+        <!-- 第一大行 系统名称 -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="div_any_child_systemname">
+                        <div class="div_any_title_systemname">智能KPI管理系统</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 系统名称结束 -->
+
+        <!-- start 第二行 人员、设备、过程、质量、物流等菜单栏 -->
+        <div class="header-advance-area">
+            <div class="header-top-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="header-top-wraper">
+                                <div class="row">
+                                    <!-- 隐藏侧边栏 -->
+                                    <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
+                                        <div class="menu-switcher-pro">
+                                            <button type="button" id="sidebarCollapse"
+                                                class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
+                                                <i class="educate-icon  educate-nav"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-10 col-md-12 col-sm-8 col-xs-12">
+                                        <div class="header-top-menu tabl-d-n">
+                                            <ul class="nav" role="tablist">
+                                                <li role="presentation"><a href="#home" aria-controls="home" role="tab"
+                                                        data-toggle="tab">总览</a></li>
+                                                <li role="presentation"><a href="#person" aria-controls="profile"
+                                                        role="tab" data-toggle="tab">人员KPI</a></li>
+                                                <li role="presentation"><a href="#equipment" aria-controls="messages"
+                                                        role="tab" data-toggle="tab">设备KPI</a></li>
+                                                <li role="presentation"><a href="#process" aria-controls="settings"
+                                                        role="tab" data-toggle="tab">过程KPI</a></li>
+                                                <li role="presentation"><a href="#quality" aria-controls="settings"
+                                                        role="tab" data-toggle="tab">质量KPI</a></li>
+                                                <li role="presentation"><a href="#logistics" aria-controls="settings"
+                                                        role="tab" data-toggle="tab">物流KPI</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
+                                        <div class="menu-switcher-pro">
+                                            <button type="button"
+                                                class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
+                                                <i class="fa fa-support" onclick="to(this)">&nbspKPI优化支持</i>
+                                            </button>
+                                            <!-- <span>A3报告导出</span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end 第二行 人员、设备、过程、质量、物流等菜单栏 -->
+
+        <!-- 数据总览-展示数据的区域 分三块 -->
+        <div class="datashow-area">
+            <div class="tab-content">
+                <!--总览-->
+                <div role="tabpanel" class="tab-pane active" id="home">
+                    <div class="container-fluid">
+                        <div class="row">
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <!-- 工厂层 -->
+                                <div class="div_any_child_summaryfactor1 ">
+                                    <div class="div_any_title_summaryfactor1"><img src="images/title_2.png">工厂层</div>
+                                    
+                                        <div class="div_any_child div_height_smallest">
+                                            <div class="text01_div_summaryfactor1">
+                                                <span>产能</span>
+                                                <br/><span id="sumfactory-1">1288件</span>
+                                            </div>
+                                        </div>
+                                        <div class="div_any_child div_height_smallest">
+                                            <div class="text01_div_summaryfactor1">
+                                                <span>质量</span>
+                                                <br/><span id="sumfactory-2">good</span>
+                                            </div>
+                                        </div>
+                                        <div class="div_any_child div_height_smallest">
+                                            <div class="text01_div_summaryfactor1">
+                                                <span>成本</span>
+                                                <br/><span id="sumfactory-3">100万元</span>
+                                            </div>
+                                        </div>
+                                        <div class="div_any_child div_height_smallest">
+                                            <div class="text01_div_summaryfactor1">
+                                                <span>交付</span>
+                                                <br/><span id="sumfactory-4">400万元</span>
+                                            </div>
+                                        </div>
+                                        <div class="div_any_child div_height_smallest">
+                                            <div class="text01_div_summaryfactor1">
+                                                <span>安全 </span>
+                                                <br/><span id="sumfactory-5">good</span>
+                                            </div>
+                                        </div>
+                                        <div class="div_any_child div_height_smallest">
+                                            <div class="text01_div_summaryfactor1">
+                                                <span>士气</span>
+                                                <br/><span id="sumfactory-6">good</span>
+                                            </div>
+                                        </div>
+                                   
+
+                                </div>
+                                <!-- 车间层 -->
+                                <div class="div_any_child_summaryfactor2 ">
+                                    <div class="div_any_title_summaryfactor2"><img src="images/title_2.png">车间层</div>
+                                    <div class="div_any_child_copy div_height_smallest">
+                                        <div class="text01_div_summaryfactor2">
+                                            <span>OEE
+                                            </span>
+                                            <br/><span id="sumworkshop-1">60%</span>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child_copy div_height_smallest">
+                                        <div class="text01_div_summaryfactor2">
+                                            <span>产量
+                                            </span>
+                                            <br/><span id="sumworkshop-2">200件</span>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child_copy div_height_smallest">
+                                        <div class="text01_div_summaryfactor2">
+                                            <span>设备完好率
+                                            </span>
+                                            <br/><span id="sumworkshop-3">80%</span>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child_copy div_height_smallest">
+                                        <div class="text01_div_summaryfactor2">
+                                            <span>材料得率
+                                            </span>
+                                            <br/><span id="sumworkshop-4">80%</span>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child_copy div_height_smallest">
+                                        <div class="text01_div_summaryfactor2">
+                                            <span>劳动生产率
+                                            </span>
+                                            <br/><span id="sumworkshop-5">70%</span>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child_copy div_height_smallest">
+                                        <div class="text01_div_summaryfactor2">
+                                            <span>制造费用
+                                            </span>
+                                            <br/><span id="sumworkshop-6">20万元</span>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child_copy div_height_smallest">
+                                        <div class="text01_div_summaryfactor2">
+                                            <span>准时交付率
+                                            </span>
+                                            <br/><span id="sumworkshop-7">85%</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="div_any_child_copy div_height_smallest">
+                                        <div class="text01_div_summaryfactor2">
+                                            <span>万元产值能耗
+                                            </span>
+                                            <br/><span id="sumworkshop-8">60%</span>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child_copy div_height_smallest">
+                                        <div class="text01_div_summaryfactor2">
+                                            <span>精益指数
+                                            </span>
+                                            <br/><span id="sumworkshop-9">70%</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- 产线层 -->
+                                <div class=" div_any_child_summaryfactor3">
+                                    <div class="div_any_title_summaryfactor3"><img src="images/title_2.png">产线层</div>
+                                    <div class="div_any_child div_height_smallest">
+                                        <div class="text01_div_summaryfactor3">
+                                            <span>OEE
+                                            </span>
+                                            <br/><span id="sumline-1">60%</span>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child div_height_smallest">
+                                        <div class="text01_div_summaryfactor3">
+                                            <span>设备负荷率
+                                            </span>
+                                            <br/><span id="sumline-2">80%</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="div_any_child div_height_smallest">
+                                        <div class="text01_div_summaryfactor3">
+                                            <span>产量
+                                            </span>
+                                            <br/><span id="sumline-3">50件</span>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child div_height_smallest">
+                                        <div class="text01_div_summaryfactor3">
+                                            <span>材料设计利用率
+                                            </span>
+                                            <br/><span id="sumline-4">90%</span>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child div_height_smallest">
+                                        <div class="text01_div_summaryfactor3">
+                                            <span>一次合格率
+                                            </span>
+                                            <br/><span id="sumline-5">70%</span>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child div_height_smallest">
+                                        <div class="text01_div_summaryfactor3">
+                                            <span>人员生产效率
+                                            </span>
+                                            <br/><span id="sumline-6">80%</span>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child div_height_smallest">
+                                        <div class="text01_div_summaryfactor3">
+                                            <span>生产计划完成率
+                                            </span>
+                                            <br/><span id="sumline-7">90%</span>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child div_height_smallest">
+                                        <div class="text01_div_summaryfactor3">
+                                            <span>客户投诉率
+                                            </span>
+                                            <br/><span id="sumline-8">10%</span>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child div_height_smallest">
+                                        <div class="text01_div_summaryfactor3">
+                                            <span>生产线平滑指数
+                                            </span>
+                                            <br/><span id="sumline-9">60.2</span>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child div_height_smallest">
+                                        <div class="text01_div_summaryfactor3">
+                                            <span>6S指标
+                                            </span>
+                                            <br/><span id="sumline-10">good</span>
+                                        </div>
+                                    </div>                                  
+
+
+                                </div>
+                                <!-- 工位层 -->
+                                <div class=" div_any_child_summaryfactor4">
+                                    <div class="div_any_title_summaryfactor4"><img src="images/title_2.png">工位层</div>
+                                    <div class="div_any_child div_height_smallest">
+                                        <div class="text01_div_summaryfactor4">
+                                            <span>设备开动率
+                                            </span>
+                                            <br/><span id="sumstation-1">90%</span>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child div_height_smallest">
+                                        <div class="text01_div_summaryfactor4">
+                                            <span>设备负荷率
+                                            </span>
+                                            <br/><span id="sumstation-2">90%</span>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child div_height_smallest">
+                                        <div class="text01_div_summaryfactor4">
+                                            <span>产量
+                                            </span>
+                                            <br/><span id="sumstation-3">20件</span>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child div_height_smallest">
+                                        <div class="text01_div_summaryfactor4">
+                                            <span>CPK
+                                            </span>
+                                            <br/><span id="sumstation-4">99.3%</span>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child div_height_smallest">
+                                        <div class="text01_div_summaryfactor4">
+                                            <span>零件加工不良率
+                                            </span>
+                                            <br/><span id="sumstation-5">2%</span>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child div_height_smallest">
+                                        <div class="text01_div_summaryfactor4">
+                                            <span>零件错检率
+                                            </span>
+                                            <br/><span id="sumstation-6">3%</span>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child div_height_smallest">
+                                        <div class="text01_div_summaryfactor4">
+                                            <span>员工工时效率
+                                            </span>
+                                            <br/><span id="sumstation-7">90%</span>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child div_height_smallest">
+                                        <div class="text01_div_summaryfactor4">
+                                            <span>工作努力度
+                                            </span>
+                                            <br/><span id="sumstation-8">good</span>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child div_height_smallest">
+                                        <div class="text01_div_summaryfactor4">
+                                            <span>岗位胜任率
+                                            </span>
+                                            <br/><span id="sumstation-9">90%</span>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child div_height_smallest">
+                                        <div class="text01_div_summaryfactor4">
+                                            <span>物料需求符合度
+                                            </span>
+                                            <br/><span id="sumstation-10">92%</span>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child div_height_smallest">
+                                        <div class="text01_div_summaryfactor4">
+                                            <span>时间窗符合度
+                                            </span>
+                                            <br/><span id="sumstation-11">93%</span>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child div_height_smallest">
+                                        <div class="text01_div_summaryfactor4">
+                                            <span>标准作业遵守率
+                                            </span>
+                                            <br/><span id="sumstation-12">90%</span>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--人员-->
+                <div role="tabpanel" class="tab-pane" id="person">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="div_any_child">
+                                    <div class="div_any_title"><img src="images/title_2.png">员工技能指数</div>
+                                    <p id="persongc1" class="p_chart"></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="div_any_child">
+                                    <div class="div_any_title"><img src="images/title_2.png">人员培训计划完成情况</div>
+                                    <p id="persongc2" class="p_chart"></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="div_any_child">
+                                    <div class="div_any_title"><img src="images/title_1.png">订单完成率</div>
+                                    <p id="personcx3" class="p_chart"></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="div_any_child">
+                                    <div class="div_any_title"><img src="images/title_2.png">劳动生产效率</div>
+                                    <p id="personcx4" class="p_chart"></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="div_any_child">
+                                    <div class="div_any_title"><img src="images/title_2.png">学习曲线</div>
+                                    <p id="personcx5" class="p_chart"></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="div_any_child">
+                                    <div class="div_any_title"><img src="images/title_1.png">人才流失率</div>
+                                    <p id="personcx6" class="p_chart"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--设备-->
+                <div role="tabpanel" class="tab-pane" id="equipment">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="div_any_child">
+                                    <div class="div_any_title"><img src="images/title_1.png">MTBF</div>
+                                    <p id="equipment_A_4" class="p_chart"></p>
+                                </div>
+                                <div class="div_any_child">
+                                    <div class="div_any_title"><img src="images/title_2.png">设备开动率</div>
+                                    <p id="equipment_A_1" class="p_chart"></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="div_any_child">
+                                    <div class="div_any_title"><img src="images/title_1.png">雷达图</div>
+                                    <p id="equipment_A" class="p_chart"></p>
+                                </div>
+                                <div class="div_any_child">
+                                    <div class="div_any_title"><img src="images/title_2.png">设备负荷率</div>
+                                    <p id="equipment_A_2" class="p_chart"></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="div_any_child">
+                                    <div class="div_any_title"><img src="images/title_1.png">MTTR</div>
+                                    <p id="equipment_A_5" class="p_chart"></p>
+                                </div>
+                                <div class="div_any_child">
+                                    <div class="div_any_title"><img src="images/title_2.png">设备能力指数</div>
+                                    <p id="equipment_A_3" class="p_chart"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--过程-->
+                <div role="tabpanel" class="tab-pane" id="process">4</div>
+                <!--质量-->
+                <div role="tabpanel" class="tab-pane" id="quality">
+                    <!-- 展示数据的区域 分三块 -->
+                    <div class="datashow-area">
+                        <div class="container-fluid">
+
+
+                            <!--数据总概-->
+                            <div class="con_div">
+                                <div class="con_div_text left">
+                                    <div class="con_div_text01 left">
+                                        <img src="images/info_7.png" class="left text01_img" />
+                                        <div class="left text01_div">
+                                            <p>内部质量损失率</p>
+                                            <p>1%</p>
+                                        </div>
+                                    </div>
+                                    <div class="con_div_text01 right">
+                                        <img src="images/info_8.png" class="left text01_img" />
+                                        <div class="left text01_div">
+                                            <p>外部质量损失率</p>
+                                            <p>2%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="con_div_text left">
+                                    <div class="con_div_text01 left">
+                                        <img src="images/info_9.png" class="left text01_img" />
+                                        <div class="left text01_div">
+                                            <p>当月返修产品总数</p>
+                                            <p class="sky">356件</p>
+                                        </div>
+                                    </div>
+                                    <div class="con_div_text01 right">
+                                        <img src="images/info_10.png" class="left text01_img" />
+                                        <div class="left text01_div">
+                                            <p>当月质量事故次数349次</p>
+                                            <p class="sky">349次</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="con_div_text left">
+
+                                    <div class="con_div_text01 left">
+                                        <img src="images/info_11.png" class="left text01_img" />
+                                        <div class="left text01_div">
+                                            <p>当月生产产品总数</p>
+                                            <p class="org">2683792件</p>
+                                        </div>
+                                    </div>
+                                    <div class="con_div_text01 right">
+                                        <img src="images/info_12.png" class="left text01_img" />
+                                        <div class="left text01_div">
+                                            <p>当月合格成品总数</p>
+                                            <p class="org">2153628件</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                                <!-- 第一列 -->
+                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="div_any_child">
+                                        <div class="div_any_title"><img src="images/title_1.png">产品一次交检合格率</div>
+                                        <p id="quality_A_L1_1" class="p_chart"></p>
+                                    </div>
+
+
+                                    <div class="div_any_child">
+                                        <div class="div_any_title"><img src="images/title_2.png">质量事故量</div>
+                                        <p id="quality_A_L1_2" class="p_chart"></p>
+                                    </div>
+
+                                </div>
+                                <!-- 第二列 -->
+                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="div_any_child div_height">
+                                        <div class="div_any_title any_title_width"><img src="images/title_0.png">质量KPI
+                                        </div>
+                                        <div id="quality_A_M1"
+                                            style="width:100%;height:100%;display: inline-block;padding-left:1.25%;padding-right:1.25%;padding-top:25%">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 第三列 -->
+                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="div_any_child">
+                                        <div class="div_any_title"><img src="images/title_1.png">产品返修率</div>
+                                        <p id="quality_A_R1_1" class="p_chart"></p>
+                                    </div>
+                                    <div class="div_any_child">
+                                        <div class="div_any_title"><img src="images/title_2.png">质量损失率</div>
+                                        <p id="quality_A_R1_2" class="p_chart"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--物流-->
+                <div role="tabpanel" class="tab-pane" id="logistics">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="div_any_child">
+                                    <div class="div_any_title"><img src="images/title_1.png">物流总成本</div>
+                                    <p id="logistic_scost" class="p_chart"></p>
+                                </div>
+                                <div class="div_any_child">
+                                    <div class="div_any_title"><img src="images/title_2.png">配送效率</div>
+                                    <p id="logistic_efficiency" class="p_chart"></p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                                <div class="div_any_child">
+                                    <div class="div_any_title"><img src="images/title_1.png">按时交货率</div>
+                                    <p id="logistic_jiaofu" class="p_chart"></p>
+                                </div>
+
+                                <div class="div_any_child">
+                                    <div class="div_any_title"><img src="images/title_2.png">采购准时率</div>
+                                    <p id="logistic_purchase" class="p_chart"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <script src="js/le/station_equipment.js"></script>
+    <!-- jquery
+    ============================================ -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap JS
+        ============================================ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- wow JS
+        ============================================ -->
+    <script src="js/wow.min.js"></script>
+    <!-- price-slider JS
+        ============================================ -->
+    <script src="js/jquery-price-slider.js"></script>
+    <!-- meanmenu JS
+        ============================================ -->
+    <script src="js/jquery.meanmenu.js"></script>
+    <!-- owl.carousel JS
+        ============================================ -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- sticky JS
+        ============================================ -->
+    <script src="js/jquery.sticky.js"></script>
+    <!-- scrollUp JS
+        ============================================ -->
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <!-- counterup JS
+        ============================================ -->
+    <script src="js/counterup/jquery.counterup.min.js"></script>
+    <script src="js/counterup/waypoints.min.js"></script>
+    <script src="js/counterup/counterup-active.js"></script>
+    <!-- mCustomScrollbar JS
+        ============================================ -->
+    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/scrollbar/mCustomScrollbar-active.js"></script>
+    <!-- metisMenu JS
+        ============================================ -->
+    <script src="js/metisMenu/metisMenu.min.js"></script>
+    <script src="js/metisMenu/metisMenu-active.js"></script>
+    <!-- morrisjs JS
+        ============================================ -->
+    <script src="js/morrisjs/raphael-min.js"></script>
+    <script src="js/morrisjs/morris.js"></script>
+    <script src="js/morrisjs/morris-active.js"></script>
+    <!-- morrisjs JS
+        ============================================ -->
+    <script src="js/sparkline/jquery.sparkline.min.js"></script>
+    <script src="js/sparkline/jquery.charts-sparkline.js"></script>
+    <script src="js/sparkline/sparkline-active.js"></script>
+    <!-- calendar JS
+        ============================================ -->
+    <script src="js/calendar/moment.min.js"></script>
+    <script src="js/calendar/fullcalendar.min.js"></script>
+    <script src="js/calendar/fullcalendar-active.js"></script>
+    <!-- plugins JS
+        ============================================ -->
+    <script src="js/plugins.js"></script>
+    <!-- main JS
+        ============================================ -->
+    <script src="js/main.js"></script>
+    <!-- tawk chat JS
+        ============================================ -->
+
+</body>
+
+</html>

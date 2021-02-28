@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="layer/layer.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+</head>
+<body>
+    <button id="test2">Layer+Echarts构建弹出层折线图</button>
+    <div id="speedChart" style="display: none;">
+        <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+        <div id="speedChartMain" style="width: 600px; height: 400px;"></div>
+    </div>
+
+    <div id="dfd">
+        <span>Layer+Echarts构建弹出层折线图</span>
+        <p>Layer+Echarts构建弹出层折线图</p>
+    </div>
+
+    <!--<script>
+        $(document).ready(function() {
+            option = {
+                tooltip: {
+                    trigger: 'axis'
+                },
+                legend: {
+                    data:[]
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                toolbox: {
+                    feature: {
+                        saveAsImage: {}
+                    }
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: []
+                },
+                yAxis: {
+                    type: 'value'
+                },
+                series: []
+            };
+
+            //按钮提交表单数据
+            $("#subSpeed").click(function(){
+                // 基于准备好的dom，初始化echarts实例
+                var myChart = echarts.init(document.getElementById('speedChartMain'));
+                // 使用刚指定的配置项和数据显示图表。
+                myChart.setOption(option);
+                var url=$("#speedFrom").attr("action");
+                var times=[];  //時間数组（实际用来盛放X轴坐标值）
+                var speeds=[];  //速度数组（实际用来盛放Y坐标值）
+                $.post(url,$("#speedFrom").serialize(),
+                    function(data, status){
+                        if(data!=null){
+                            for (var i = 0; i < data.length; i++) {
+                                times.push(data[i].timeStamp);
+                                speeds.push(data[i].speed);
+                            }
+                            //之前option中legend和 XAxis的data,series 为空，所以现在将数据填充进去
+                            myChart.setOption({    //加载数据图表
+                                legend: {
+                                    data:[$("#roads").val()]
+                                },
+                                xAxis: {
+                                    data: times
+                                },
+                                series: [{
+                                    // 根据名字对应到相应的系列
+                                    name: $("#roads").val(),
+                                    type:'line',
+                                    data: speeds
+                                }]
+                            });
+                        }
+
+                        layer.open({
+                            title:'折线图',
+                            type: 1,
+                            shade: false,
+                            area: ['620px', '460px'],
+                            shadeClose: true, //点击遮罩关闭
+                            content: $("#speedChart")
+                        });
+                    },"json");
+            });
+        });
+
+    </script>-->
+
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('speedChartMain'));
+        option = {
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data:['邮件营销','联盟广告','视频广告','直接访问','搜索引擎']
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {}
+                }
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['周一','周二','周三','周四','周五','周六','周日']
+            },
+            yAxis: {
+
+                type: 'value'
+            },
+            series: [
+                {
+                    name:'邮件营销',
+                    type:'line',
+                    stack: '总量',
+                    data:[120, 132, 101, 134, 90, 230, 210]
+                },
+                {
+                    name:'联盟广告',
+                    type:'line',
+                    stack: '总量',
+                    data:[220, 182, 191, 234, 290, 330, 310]
+                },
+                {
+                    name:'视频广告',
+                    type:'line',
+                    stack: '总量',
+                    data:[150, 232, 201, 154, 190, 330, 410]
+                },
+                {
+                    name:'直接访问',
+                    type:'line',
+                    stack: '总量',
+                    data:[320, 332, 301, 334, 390, 330, 320]
+                },
+                {
+                    name:'搜索引擎',
+                    type:'line',
+                    stack: '总量',
+                    data:[820, 932, 901, 934, 1290, 1330, 1320]
+                }
+            ]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        //弹出一个页面层
+        $('#test2').on('click', function() {
+            layer.open({
+                title:'hello world',
+                type: 1,
+                shade: false,
+                area: ['620px', '460px'],
+                shadeClose: false, //点击遮罩关闭
+                content: $("#speedChart")
+            });
+        });
+    </script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>智能KPI 工厂V1.0</title>
+    <!-- ---------------添加开始 ------------------->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/commen_quality.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <!-- <script src="js/flexible.js"></script> -->
+    <script src="js/quality1.js"></script>
+    <script src="js/le/factory_equipment.js"></script>
+    <script src="js/boot_demo0802.js"></script>
+    <script src="js/zonglan.js"></script>
+    <script src="js/logistic_factory.js"></script>
+
+    <script src="js/persongcChart.js"></script>
+    <script src="js/qiyeKPI.js"></script>
+    <script src="js/toSupport.js"></script>
+
+    <script src="layer/layer.js"></script>
+    <script src="layer/extend/layer.ext.js"></script>
+
+
+    <!-- ---------------添加结束 ------------------->
+
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+		============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Google Fonts
+            ============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- normalize CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- meanmenu icon CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <!-- main CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- educate icon CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/educate-custon-icon.css">
+    <!-- mCustomScrollbar CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- metisMenu CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="css/metisMenu/metisMenu-vertical.css">
+    <!-- style CSS
+            ============================================ -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- responsive CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- modernizr JS
+            ============================================ -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <!-- zrh模板 引用的 -->
+    <link href="styles/common.css" rel="stylesheet">
+    <script src="scripts/Plugin/jquery-3.3.1.min.js"></script>
+    <script src="scripts/Plugin/echarts.min.js"></script>
+    <script src="scripts/common.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/Plugin/laydate/laydate.js"></script>
+</head>
+<body>
+<!--start 左边菜单栏  -->
+<div class="left-sidebar-pro">
+    <nav id="sidebar" class="">
+        <!--左边的公司logo -->
+        <div class="sidebar-header">
+            <a href="index.html"><img class="main-logo" src="img/logo/combini-small.JPG" alt="" /></a>
+
+        </div>
+
+        <div class="left-custom-menu-adp-wrap comment-scrollbar">
+            <nav class="sidebar-nav left-sidebar-menu-pro">
+                <!-- 整个左边菜单栏，四个层级，工厂、车间、产线、工位 -->
+                <ul class="metismenu" id="menu1">
+                    <!-- 套娃 -->
+                    <li class="active">
+                        <!--这个active是不隐藏底下的子栏目，默认是隐藏的-->
+                        <a class="has-arrow" href="companyKPI.html">
+                            <span class="educate-icon educate-home icon-wrap"></span>
+                            <span class="icon-wrap" id="company-jump">企业KPI</span>
+                            <!-- <span class="mini-click-non fa fa-home fa-4x">&nbsp智能KPI</span> -->
+                        </a>
+                        <ul class="submenu-angle" aria-expanded="true">
+                            <li class="active">
+                                <a title="工厂1" class="has-arrow" href="index-factory.html">
+                                        <span class="mini-sub-pro fa fa-industry fa-3x"
+                                              id="factory-jump1">&nbsp&nbsp工厂1</span>
+                                </a>
+                                <ul>
+                                    <li class="active">
+                                        <a title="车间1" class="has-arrow" href="index-workshop.html">&nbsp&nbsp<span
+                                                class="mini-sub-pro fa fa-indent fa-2x"
+                                                id="workshop-jump1-1">&nbsp&nbsp车间1</span></a>
+                                        <ul>
+                                            <li class="active">
+                                                <a title="产线1" class="has-arrow"
+                                                   href="index-line.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                        class="mini-sub-pro fa fa-line-chart"
+                                                        id="line-jump1-1-1">&nbsp&nbsp产线1</span></a>
+                                                <ul>
+                                                    <li><a href="index-workstation.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male"
+                                                            id="workstation-jump1-1-1-1">&nbsp&nbsp工位1</span></a>
+                                                    </li>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male"
+                                                            id="workstation-jump1-1-1-2">&nbsp&nbsp工位2</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="active">
+                                                <a title="产线2" class="has-arrow"
+                                                   href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                        class="mini-sub-pro fa fa-line-chart"
+                                                        id="line-jump1-1-2">&nbsp&nbsp产线2</span></a>
+                                                <ul>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male"
+                                                            id="workstation-jump1-1-2-1">&nbsp&nbsp工位1</span></a>
+                                                    </li>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male"
+                                                            id="workstation-jump1-1-2-2">&nbsp&nbsp工位2</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="active">
+                                        <a title="车间2" class="has-arrow" href="index.html">&nbsp&nbsp<span
+                                                class="mini-sub-pro fa fa-indent fa-2x"
+                                                id="workshop-jump1-2">&nbsp&nbsp车间2</span></a>
+                                        <ul>
+                                            <li class="active">
+                                                <a title="产线1" class="has-arrow"
+                                                   href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                        class="mini-sub-pro fa fa-line-chart"
+                                                        id="line-jump1-2-1">&nbsp&nbsp产线1</span></a>
+                                                <ul>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male"
+                                                            id="workstation-jump1-2-1-1">&nbsp&nbsp工位1</span></a>
+                                                    </li>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male"
+                                                            id="workstation-jump1-2-1-2">&nbsp&nbsp工位2</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="active">
+                                                <a title="产线2" class="has-arrow"
+                                                   href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                        class="mini-sub-pro fa fa-line-chart"
+                                                        id="line-jump1-2-2">&nbsp&nbsp产线2</span></a>
+                                                <ul>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male"
+                                                            id="workstation-jump1-2-2-1">&nbsp&nbsp工位1</span></a>
+                                                    </li>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male"
+                                                            id="workstation-jump1-2-2-2">&nbsp&nbsp工位2</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+                                <a title="工厂2" class="has-arrow" href="index.html">
+                                    <span class="mini-sub-pro fa fa-industry fa-3x">&nbsp&nbsp工厂2</span>
+                                </a>
+                                <ul>
+                                    <li class="active">
+                                        <a title="车间1" class="has-arrow" href="index.html">&nbsp&nbsp<span
+                                                class="mini-sub-pro fa fa-indent fa-2x">&nbsp&nbsp车间1</span></a>
+                                        <ul>
+                                            <li class="active">
+                                                <a title="产线1" class="has-arrow"
+                                                   href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                        class="mini-sub-pro fa fa-line-chart">&nbsp&nbsp产线1</span></a>
+                                                <ul>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male">&nbsp&nbsp工位1</span></a>
+                                                    </li>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male">&nbsp&nbsp工位2</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="active">
+                                                <a title="产线2" class="has-arrow"
+                                                   href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                        class="mini-sub-pro fa fa-line-chart">&nbsp&nbsp产线2</span></a>
+                                                <ul>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male">&nbsp&nbsp工位1</span></a>
+                                                    </li>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male">&nbsp&nbsp工位2</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="active">
+                                        <a title="车间2" class="has-arrow" href="index.html">&nbsp&nbsp<span
+                                                class="mini-sub-pro fa fa-indent fa-2x">&nbsp&nbsp车间2</span></a>
+                                        <ul>
+                                            <li class="active">
+                                                <a title="产线1" class="has-arrow"
+                                                   href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                        class="mini-sub-pro fa fa-line-chart">&nbsp&nbsp产线1</span></a>
+                                                <ul>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male">&nbsp&nbsp工位1</span></a>
+                                                    </li>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male">&nbsp&nbsp工位2</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="active">
+                                                <a title="产线2" class="has-arrow"
+                                                   href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                        class="mini-sub-pro fa fa-line-chart">&nbsp&nbsp产线2</span></a>
+                                                <ul>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male">&nbsp&nbsp工位1</span></a>
+                                                    </li>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male">&nbsp&nbsp工位2</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                </ul>
+            </nav>
+        </div>
+    </nav>
+</div>
+<!-- End 左边菜单栏 -->
+
+<!-- start 右边部分 -->
+<div class="all-content-wrapper">
+    <!-- 第一大行 系统名称 -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="div_any_child_systemname">
+                    <div class="div_any_title_systemname">智能KPI管理系统</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 系统名称结束 -->
+
+    <!-- start 第二行 人员、设备、过程、质量、物流等菜单栏 -->
+<!--    <div class="header-advance-area">-->
+<!--        <div class="header-top-area">-->
+<!--            <div class="container-fluid">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">-->
+<!--                        <div class="header-top-wraper">-->
+<!--                            <div class="row">-->
+<!--                                &lt;!&ndash; 隐藏侧边栏 &ndash;&gt;-->
+<!--                                <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">-->
+<!--                                    <div class="menu-switcher-pro">-->
+<!--                                        <button type="button" id="sidebarCollapse"-->
+<!--                                                class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">-->
+<!--                                            <i class="educate-icon  educate-nav"></i>-->
+<!--                                        </button>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-lg-10 col-md-12 col-sm-8 col-xs-12">-->
+<!--                                    <div class="header-top-menu tabl-d-n">-->
+<!--                                        <ul class="nav" role="tablist">-->
+<!--                                            <li role="presentation"><a href="#home" aria-controls="home" role="tab"-->
+<!--                                                                       data-toggle="tab">总览</a></li>-->
+<!--                                            <li role="presentation"><a href="#person" aria-controls="profile"-->
+<!--                                                                       role="tab" data-toggle="tab">人员KPI</a></li>-->
+<!--                                            <li role="presentation"><a href="#equipment" aria-controls="messages"-->
+<!--                                                                       role="tab" data-toggle="tab">设备KPI</a></li>-->
+<!--                                            <li role="presentation"><a href="#process" aria-controls="settings"-->
+<!--                                                                       role="tab" data-toggle="tab">过程KPI</a></li>-->
+<!--                                            <li role="presentation"><a href="#quality" aria-controls="settings"-->
+<!--                                                                       role="tab" data-toggle="tab">质量KPI</a></li>-->
+<!--                                            <li role="presentation"><a href="#logistics" aria-controls="settings"-->
+<!--                                                                       role="tab" data-toggle="tab">物流KPI</a></li>-->
+<!--                                        </ul>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">-->
+<!--                                    <div class="menu-switcher-pro">-->
+<!--                                        <button type="button" class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">-->
+<!--                                            <i class="fa fa-support" onclick="to(this)">&nbspKPI优化支持</i>-->
+<!--                                        </button>-->
+<!--                                        &lt;!&ndash; <span>A3报告导出</span> &ndash;&gt;-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+    <!-- end 第二行 人员、设备、过程、质量、物流等菜单栏 -->
+
+    <div style="color: white;padding-bottom: 2%;padding-top: 3%" align="center">
+        <form id="indicatorForm" action="P.html" method="get" >
+            <select class="btn btn-primary dropdown-toggle"  name="rank" id="rank" aria-haspopup="true" aria-expanded="false">
+                <option value="1" >请选择层级</option>
+                <option value="工厂">工厂级</option>
+                <option value="车间">车间级</option>
+                <option value="产线">产线级</option>
+                <option value="工位">工位级</option>
+            </select>
+            <select class="btn btn-primary dropdown-toggle" name="kind" id="kind" aria-haspopup="true" aria-expanded="false">
+                <option value="" selected>请选择KPI类型</option>
+                <option value="人员">人员KPI</option>
+                <option value="设备">设备KPI</option>
+                <option value="过程">过程KPI</option>
+                <option value="质量">质量KPI</option>
+                <option value="物流">物流KPI</option>
+                <option value="企业">企业KPI</option>
+            </select>
+
+            <!--                动态显示的指标-->
+            <select class="btn btn-primary dropdown-toggle" name="indicator" id="indicator" aria-haspopup="true" aria-expanded="false">
+                <option value="" selected>请选择指标</option>
+                <option value="员工技能指数">员工技能指数</option>
+                <option value="人员培训覆盖率">人员培训覆盖率</option>
+                <option value="订单完成率">订单完成率</option>
+                <option value="劳动生产效率">劳动生产效率</option>
+                <option value="学习曲线">学习曲线</option>
+                <option value="人才流失率">人才流失率</option>
+                <option value="OEE">OEE</option>
+                <option value="设备完好率">设备完好率</option>
+                <option value="良品率">良品率</option>
+                <option value="生产成本">生产成本</option>
+                <option value="精益指数">精益指数</option>
+                <option value="人均生产率">人均生产率</option>
+                <option value="按时交货率">按时交货率</option>
+                <option value="成品一检合格率">成品一检合格率</option>
+                <option value="质量KPI">质量KPI</option>
+                <option value="产品返修率">产品返修率</option>
+                <option value="质量事故量">质量事故量</option>
+                <option value="质量损失率">质量损失率</option>
+                <option value="物流总成本">物流总成本</option>
+                <option value="配送效率">配送效率</option>
+                <option value="采购准时率">采购准时率</option>
+                <option value="准时交货率">准时交货率</option>
+                <option value="人员培训情况">人员培训情况</option>
+                <option value="有效工时利用率">有效工时利用率</option>
+                <option value="设备维护率">设备维护率</option>
+                <option value="生产计划完成率">生产计划完成率</option>
+                <option value="产量">产量</option>
+                <option value="在制品废品率">在制品废品率</option>
+                <option value="在制品返工率">在制品返工率</option>
+                <option value="在制品加工不良率">在制品加工不良率</option>
+                <option value="在制品漏检率">在制品漏检率</option>
+                <option value="进料合格率">进料合格率</option>
+                <option value="在制品错检率">在制品错检率</option>
+                <option value="库存周转率">库存周转率</option>
+                <option value="物流强度">物流强度</option>
+                <option value="储位容积使用率">储位容积使用率</option>
+                <option value="6S指标">6S指标</option>
+                <option value="准时出勤率">准时出勤率</option>
+                <option value="技能成长">技能成长</option>
+                <option value="人员有效分分配率">人员有效分分配率</option>
+                <option value="设备负荷率">设备负荷率</option>
+                <option value="无故障时间率">无故障时间率</option>
+                <option value="生产节拍符合度">生产节拍符合度</option>
+                <option value="产线平衡率">产线平衡率</option>
+                <option value="线末产出率">线末产出率</option>
+                <option value="部件错检率">部件错检率</option>
+                <option value="部件漏检率">部件漏检率</option>
+                <option value="部件废品率">部件废品率</option>
+                <option value="部件返工率">部件返工率</option>
+                <option value="部件加工不良率">部件加工不良率</option>
+                <option value="生产线平衡率">生产线平衡率</option>
+                <option value="生产线平滑指数">生产线平滑指数</option>
+                <option value="产线节拍符合度">产线节拍符合度</option>
+                <option value="换线时间">换线时间</option>
+                <option value="岗位胜任人量">岗位胜任人量</option>
+                <option value="工作努力度">工作努力度</option>
+                <option value="员工工时效率">员工工时效率</option>
+                <option value="员工到岗情况考核">员工到岗情况考核</option>
+                <option value="标准作业遵守率">标准作业遵守率</option>
+                <option value="MTBF">MTBF</option>
+                <option value="MTTR">MTTR</option>
+                <option value="设备开动率">设备开动率</option>
+                <option value="设备能力指数">设备能力指数</option>
+                <option value="设备负荷率">设备负荷率</option>
+                <option value="CPK">CPK</option>
+                <option value="生产计划完成率">生产计划完成率</option>
+                <option value="标准作业遵守率">标准作业遵守率</option>
+                <option value="零件加工不良率">零件加工不良率</option>
+                <option value="错检率">错检率</option>
+                <option value="零件返工率">零件返工率</option>
+                <option value="漏检率">漏检率</option>
+                <option value="物料需求量符合度">物料需求量符合度</option>
+                <option value="时间窗要求符合度">时间窗要求符合度</option>
+            </select>
+            <!--            <input type="submit" class="btn btn-primary" value="下一步" >-->
+            <select class="btn btn-primary dropdown-toggle" name="indicator" id="indicator" aria-haspopup="true" aria-expanded="false">
+                <option value="" selected>请选择问题大类</option>
+                <option value="销售收入">物流</option>
+                <option value="OEE">设备</option>
+
+            </select>
+            <div style="margin-top: 25px;" align="center">
+                关键词：<input type="text" style="width: 150px">
+                发布日期: <input type="datetime-local" step="01" name="user_date" style="color: black"/>
+                完成日期: <input type="datetime-local" step="01" name="user_date" style="color: black"/>
+                责任人：<input type="text" style="width: 80px">
+            </div>
+        </form>
+    </div>
+
+    <!-- 展示数据的区域 分三块 -->
+    <div class="datashow-area">
+        <div class="tab-content">
+            <!--KPI优化-->
+            <div role="tabpanel" class="tab-pane active" id="home">
+                <!-- 展示数据的区域 分三块 -->
+                <div class="datashow-area">
+                    <div class="container-fluid">
+                        <div id="print">
+                            <div class="row">
+                                <!-- 第一列 -->
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div>
+                                            <style>
+                                                body {
+                                                    font-size: 100%;
+                                                    height: 100%;
+                                                    background-color: #081832;
+                                                }
+                                                .table_p {
+                                                    height: 95%;
+                                                    margin-top: 4%;
+                                                    margin-bottom: 2%;
+                                                    position: relative;
+                                                }
+                                                .table_p table {
+                                                    width: 100%;
+                                                    height: 95%;
+                                                    border-collapse: collapse;
+                                                    position: absolute;
+                                                    text-align: center;
+                                                }
+                                                .table_p table thead th {
+                                                    text-align: center;
+                                                    color: #61d2f7;
+                                                    font-size: 14px;
+                                                    font-weight: 600;
+                                                    padding-top: 5px;
+                                                    padding-bottom: 5px;
+                                                }
+
+                                                .table_p table tbody {
+                                                    color: #ffffff;
+                                                    font-size: 13px;
+                                                }
+
+                                                .table_p table tbody tr:nth-child(2n+1) {
+                                                    background-color: #072951;
+                                                    box-shadow: -10px 0px 15px #034c6a inset, 10px 0px 15px #034c6a inset;
+                                                }
+                                                input{color: black}
+                                            </style>
+                                            <style>
+                                                .table_p {
+                                                    margin-left: 30px;
+                                                    color: white;
+                                                    font-size: 20px;
+                                                }
+                                            </style>
+                                        <div class="div_any_child" style="height: 340px;line-height: 0px;" >
+                                            <div class="div_any_title"><img src="images/title_1.png">背景分析</div>
+                                            <div class="table_z">
+                                                <table width="100%" >
+                                                    <tr align="center">
+                                                        <td width="50%">
+                                                            <textarea name="z" style="width:100%;height:14rem;margin-left: 5%;margin-top: 1%;color: #122b40" placeholder="这里写内容"></textarea>
+                                                            <!--                                                        <a class="btn btn-primary" href="add.html" style="margin-bottom: 10%">输入文字</a>-->
+                                                        </td>
+                                                        <td style="margin-left: 10%">
+                                                            <form name="form0" id="form0">
+
+                                                                <img src="" id="img1" style="width:85%;height:10rem;margin-left: 10%;margin-right: 10%;margin-bottom: 1%;margin-top: 20%">
+                                                                <input type="file" name="file1" id="file1"  class="btn btn-primary" style="margin-bottom: 13%;margin-left: 4%;width: 80%"accept="image/gif,image/jpeg,image/jpg,image/png,image/svg"/><br>
+                                                            </form>
+                                                            <script type="text/javascript">
+                                                                $("#file1").change(function(){
+                                                                    var objUrl = getObjectURL(this.files[0]) ;//获取文件信息
+                                                                    console.log("objUrl = "+objUrl);
+                                                                    if (objUrl) {
+                                                                        $("#img1").attr("src", objUrl);
+                                                                    }
+                                                                });
+
+                                                                function getObjectURL(file) {
+                                                                    var url = null;
+                                                                    if(window.createObjectURL!=undefined) {
+                                                                        url = window.createObjectURL(file) ;
+                                                                    }else if (window.URL!=undefined) { // mozilla(firefox)
+                                                                        url = window.URL.createObjectURL(file) ;
+                                                                    }else if (window.webkitURL!=undefined) { // webkit or chrome
+                                                                        url = window.webkitURL.createObjectURL(file) ;
+                                                                    }
+                                                                    return url ;
+                                                                }
+                                                            </script>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+<!--                                            <div class="table_p">背景分析-->
+<!--                                                <input type="text" style="width: 97%" placeholder="请输入背景分析"></div>-->
+<!--                                            <div align="center"><input type="button" value="提交"-->
+<!--                                                                       class="btn btn-primary" style="font-size: 15px;margin-top: -130px"></div>-->
+<!--                                        </div>-->
+
+                                        <div class="div_any_child" style="height: 340px;line-height: 0px;" >
+                                            <div class="div_any_title"><img src="images/title_1.png">当前状况问题描述</div>
+                                            <div class="table_z">
+                                                <table width="100%" >
+                                                    <tr align="center">
+                                                        <td width="50%">
+                                                            <textarea name="z" style="width:100%;height:14rem;margin-left: 5%;margin-top: 1%;color: #122b40" placeholder="这里写内容"></textarea>
+                                                            <!--                                                        <a class="btn btn-primary" href="add.html" style="margin-bottom: 10%">输入文字</a>-->
+                                                        </td>
+                                                        <td style="margin-left: 10%">
+                                                            <form name="form0" id="form0">
+
+                                                                <img src="" id="img2" style="width:85%;height:10rem;margin-left: 10%;margin-right: 10%;margin-bottom: 1%;margin-top: 20%">
+                                                                <input type="file" name="file2" id="file2"  class="btn btn-primary"  style="margin-bottom: 13%;margin-left: 4%;width: 80%"accept="image/gif,image/jpeg,image/jpg,image/png,image/svg"/><br>
+                                                            </form>
+                                                            <script type="text/javascript">
+                                                                $("#file2").change(function(){
+                                                                    var objUrl = getObjectURL(this.files[0]) ;//获取文件信息
+                                                                    console.log("objUrl = "+objUrl);
+                                                                    if (objUrl) {
+                                                                        $("#img2").attr("src", objUrl);
+                                                                    }
+                                                                });
+
+                                                                function getObjectURL(file) {
+                                                                    var url = null;
+                                                                    if(window.createObjectURL!=undefined) {
+                                                                        url = window.createObjectURL(file) ;
+                                                                    }else if (window.URL!=undefined) { // mozilla(firefox)
+                                                                        url = window.URL.createObjectURL(file) ;
+                                                                    }else if (window.webkitURL!=undefined) { // webkit or chrome
+                                                                        url = window.webkitURL.createObjectURL(file) ;
+                                                                    }
+                                                                    return url ;
+                                                                }
+                                                            </script>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="div_any_child" style="height: 340px;line-height: 0px;" >
+                                            <div class="div_any_title"><img src="images/title_1.png">目标描述</div>
+                                            <div class="table_z">
+                                                <table width="100%" >
+                                                    <tr align="center">
+                                                        <td width="50%">
+                                                            <textarea name="z" style="width:100%;height:14rem;margin-left: 5%;margin-top: 1%;color: #122b40" placeholder="这里写内容"></textarea>
+                                                            <!--                                                        <a class="btn btn-primary" href="add.html" style="margin-bottom: 10%">输入文字</a>-->
+                                                        </td>
+                                                        <td style="margin-left: 10%">
+                                                            <form name="form3" id="form3">
+
+                                                                <img src="" id="img3" style="width:85%;height:10rem;margin-left: 10%;margin-right: 10%;margin-bottom: 1%;margin-top: 20%">
+                                                                <input type="file" name="file0" id="file0"  class="btn btn-primary" href="add.html" style="margin-bottom: 13%;margin-left: 4%;width: 80%"accept="image/gif,image/jpeg,image/jpg,image/png,image/svg"/><br>
+                                                            </form>
+                                                            <script type="text/javascript">
+                                                                $("#file3").change(function(){
+                                                                    var objUrl = getObjectURL(this.files[0]) ;//获取文件信息
+                                                                    console.log("objUrl = "+objUrl);
+                                                                    if (objUrl) {
+                                                                        $("#img3").attr("src", objUrl);
+                                                                    }
+                                                                });
+
+                                                                function getObjectURL(file) {
+                                                                    var url = null;
+                                                                    if(window.createObjectURL!=undefined) {
+                                                                        url = window.createObjectURL(file) ;
+                                                                    }else if (window.URL!=undefined) { // mozilla(firefox)
+                                                                        url = window.URL.createObjectURL(file) ;
+                                                                    }else if (window.webkitURL!=undefined) { // webkit or chrome
+                                                                        url = window.webkitURL.createObjectURL(file) ;
+                                                                    }
+                                                                    return url ;
+                                                                }
+                                                            </script>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="div_any_child" style="height: 300px;line-height: 0px;" >
+                                            <div class="div_any_title"><img src="images/title_1.png">根本问题原因分析</div>
+                                            <div class="table_z">
+                                                <table width="100%" >
+                                                    <tr align="center">
+                                                        <td width="50%">
+                                                            <textarea name="z" style="width:100%;height:14rem;margin-left: 5%;margin-top: 1%;color: #122b40" placeholder="这里写内容"></textarea>
+                                                            <!--                                                        <a class="btn btn-primary" href="add.html" style="margin-bottom: 10%">输入文字</a>-->
+                                                        </td>
+                                                        <td style="margin-left: 10%">
+                                                            <form name="form0" id="form0">
+
+                                                                <img src="" id="img4" style="width:85%;height:10rem;margin-left: 10%;margin-right: 10%;margin-bottom: 1%;margin-top: 20%">
+                                                                <input type="file" name="file4" id="file4"  class="btn btn-primary" style="margin-bottom: 13%;margin-left: 4%;width: 80%"accept="image/gif,image/jpeg,image/jpg,image/png,image/svg"/><br>
+                                                            </form>
+                                                            <script type="text/javascript">
+                                                                $("#file4").change(function(){
+                                                                    var objUrl = getObjectURL(this.files[0]) ;//获取文件信息
+                                                                    console.log("objUrl = "+objUrl);
+                                                                    if (objUrl) {
+                                                                        $("#img4").attr("src", objUrl);
+                                                                    }
+                                                                });
+
+                                                                function getObjectURL(file) {
+                                                                    var url = null;
+                                                                    if(window.createObjectURL!=undefined) {
+                                                                        url = window.createObjectURL(file) ;
+                                                                    }else if (window.URL!=undefined) { // mozilla(firefox)
+                                                                        url = window.URL.createObjectURL(file) ;
+                                                                    }else if (window.webkitURL!=undefined) { // webkit or chrome
+                                                                        url = window.webkitURL.createObjectURL(file) ;
+                                                                    }
+                                                                    return url ;
+                                                                }
+                                                            </script>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                        <!--表格结束-->
+
+                                <!--第二列-->
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="div_any_child" style="height: 450px;line-height: 55px;background:url(images/DD.png)">
+                                        <!--                                        <div class="div_any_title"><img src="images/title_1.png">2</div>-->
+
+                                        <div class="div_any_title any_title_width">实施对策</div>
+                                        <textarea placeholder="请输入具体问题" style="margin-top: 40px;width:45%;height:24rem;margin-left:3%;color: black"
+                                                  name="x" type="text" algin="center"></textarea>
+<!--                                        <textarea name="z" style="width:100%;height:14rem;margin-left: 15%;margin-top: 10px;color: #122b40" placeholder="这里写内容"></textarea>-->
+                                        <table align="right" width="50%" bgcolor="#F7F7F7" cellspacing="0" cellpadding="1px" border="2px" style="margin-top: 20px;">
+                                            <!--                                                <caption>D表头表体</caption>-->
+                                            <tr bgcolor="#337AB7" align="center" >
+                                                <td>序号</td>
+                                                <td width="60%">措施</td>
+                                                <td>人员</td>
+                                                <td>时间</td>
+                                            </tr>
+                                            <tr bgcolor="#337AB7" align="center" >
+                                                <td><textarea placeholder="1" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="请输入具体措施" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="名字" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="请输入日期" style="width: 100%;"></textarea></td>
+                                            </tr>
+                                            <tr bgcolor="#337AB7" align="center" >
+                                                <td><textarea placeholder="2" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="请输入具体措施" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="名字" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="请输入日期" style="width: 100%;"></textarea></td>
+                                            </tr>
+                                            <tr bgcolor="#337AB7" align="center" >
+                                                <td><textarea placeholder="3" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="请输入具体措施" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="名字" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="请输入日期" style="width: 100%;"></textarea></td>
+                                            </tr>
+                                            <tr bgcolor="#337AB7" align="center" >
+                                                <td><textarea placeholder="4" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="请输入具体措施" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="名字" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="请输入日期" style="width: 100%;"></textarea></td>
+                                            </tr>
+                                            <tr bgcolor="#337AB7" align="center" >
+                                                <td><textarea placeholder="5" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="请输入具体措施" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="名字" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="请输入日期" style="width: 100%;"></textarea></td>
+                                            </tr>
+                                            <tr bgcolor="#337AB7" align="center" >
+                                                <td><textarea placeholder="6" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="请输入具体措施" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="名字" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="请输入日期" style="width: 100%;"></textarea></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="div_any_child" style="height: 285px;line-height: 5px;" >
+                                        <div class="div_any_title"><img src="images/title_1.png">效果确认</div>
+                                        <div class="table_z"">
+                                            <table width="100%" style="margin-top: 0px">
+                                                <tr >
+                                                    <td width="50%">
+                                                        <textarea name="z" style="width:90%;height:13rem;margin-left: 5%;margin-top: 0px;color: #122b40" placeholder="这里写内容"></textarea>
+                                                        <!--                                                        <a class="btn btn-primary" href="add.html" style="margin-bottom: 10%">输入文字</a>-->
+                                                    </td>
+                                                    <td style="margin-left: 10%">
+                                                        <form name="form0" id="form6">
+                                                            <img src="" id="img6" style="width:85%;height:10rem;margin-left: 10%;margin-right: 10%;margin-bottom: 1%;margin-top: 15%">
+                                                            <input type="file" name="file6" id="file6" class="btn btn-primary" style="margin-bottom: 8%;margin-left: 11%"accept="image/gif,image/jpeg,image/jpg,image/png,image/svg"/><br>
+                                                        </form>
+                                                        <script type="text/javascript">
+                                                            $("#file6").change(function(){
+                                                                var objUrl = getObjectURL(this.files[0]) ;//获取文件信息
+                                                                console.log("objUrl = "+objUrl);
+                                                                if (objUrl) {
+                                                                    $("#img6").attr("src", objUrl);
+                                                                }
+                                                            });
+
+                                                            function getObjectURL(file) {
+                                                                var url = null;
+                                                                if(window.createObjectURL!=undefined) {
+                                                                    url = window.createObjectURL(file) ;
+                                                                }else if (window.URL!=undefined) { // mozilla(firefox)
+                                                                    url = window.URL.createObjectURL(file) ;
+                                                                }else if (window.webkitURL!=undefined) { // webkit or chrome
+                                                                    url = window.webkitURL.createObjectURL(file) ;
+                                                                }
+                                                                return url ;
+                                                            }
+                                                        </script>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="div_any_child" style="height: 450px;line-height: 55px;background:url(images/DD.png)">
+
+                                        <div class="div_any_title"><img src="images/title_2.png">跟进措施</div>
+
+                                        <textarea placeholder="请输入具体问题" style="margin-top: 40px;width:45%;height:24rem;margin-left:3%;color: black"
+                                                  name="x" type="text" text-align="left"></textarea>
+                                        <table align="right" width="50%" bgcolor="#F7F7F7" cellspacing="0" cellpadding="1px" border="3px" style="margin-top: 20px;">
+                                            <!--                                                <caption>D表头表体</caption>-->
+                                            <tr bgcolor="#337AB7" align="center" >
+                                                <td width=>序号</td>
+                                                <td width="60%">措施</td>
+                                                <td width=>人员</td>
+                                                <td width=>时间</td>
+                                            </tr>
+                                            <tr bgcolor="#337AB7" align="center" >
+                                                <td><textarea placeholder="1" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="请输入具体措施" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="名字" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="请输入日期" style="width: 100%;"></textarea></td>
+                                            </tr>
+                                            <tr bgcolor="#337AB7" align="center" >
+                                                <td><textarea placeholder="2" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="请输入具体措施" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="名字" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="请输入日期" style="width: 100%;"></textarea></td>
+                                            <tr bgcolor="#337AB7" align="center" >
+                                            <td><textarea placeholder="3" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="请输入具体措施" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="名字" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="请输入日期" style="width: 100%;"></textarea></td>
+                                            <tr bgcolor="#337AB7" align="center" >
+                                            <td><textarea placeholder="4" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="请输入具体措施" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="名字" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="请输入日期" style="width: 100%;"></textarea></td>
+                                            <tr bgcolor="#337AB7" align="center" >
+                                            <td><textarea placeholder="5" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="请输入具体措施" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="名字" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="请输入日期" style="width: 100%;"></textarea></td>
+                                            </tr>
+                                            <tr bgcolor="#337AB7" align="center" >
+                                                <td><textarea placeholder="6" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="请输入具体措施" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="名字" style="width: 100%;"></textarea></td>
+                                                <td><textarea placeholder="请输入日期" style="width: 100%;"></textarea></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                <div class="div_any_child " style="height:120px;display: inline-block;padding-left:1.25%;padding-right:1.25%;padding-top:5%;margin-top:1.5%;width:100%">
+                                    <div class="div_any_title any_title_width">result</div>
+                                    <span style="color:white;">成本节约：</span><input type="text" style="width: 35%; height: 35px">
+                                    <span style="color:white;">参与人员：</span>
+                                    <select class="btn btn-primary dropdown-toggle"  name="rank"  aria-haspopup="true" aria-expanded="false"style="width: 35%">
+                                        <option value="1" >请选择参与人员</option>
+                                        <option value="甲">甲</option>
+                                        <option value="乙">乙</option>
+                                        <option value="丙">丙</option>
+                                        <option value="丁">丁</option>
+                                    </select>
+                                </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row" align="center">
+                                <tr>
+                                    <td colspan="8" align="center">
+                                        <a onclick="to(this)" class="btn btn-primary" >返回</a>&ensp;
+                                        <a onclick="to(this)" class="btn btn-primary" >打印A3报表</a>&ensp;
+                                        <input type="submit" class="btn btn-primary" form="" onclick="alert('提交成功')"></td>
+                                </tr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

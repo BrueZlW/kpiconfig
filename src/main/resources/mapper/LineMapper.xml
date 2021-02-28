@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kpi.dao.Linemapper">
+    <select id="getELine" resultType="Equipment_line">
+        select * from ${table} LIMIT #{limit}
+    </select>
+
+    <select id="getPersonLine" resultType="Person_line">
+        select * from ${table} LIMIT #{limit}
+    </select>
+
+    <select id="getProLine" resultType="Process_line">
+        select * from ${table} LIMIT #{limit}
+    </select>
+
+    <select id="getQLine" resultType="Quality_line">
+        select * from ${table} LIMIT #{limit}
+    </select>
+    <select id="getLoLine" resultType="Logistics_line">
+        select * from ${table} LIMIT #{limit}
+    </select>
+    <select id="getperonpa" resultType="Person_p_a">
+        select * from ${table} LIMIT #{limit}
+    </select>
+</mapper>
